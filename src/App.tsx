@@ -54,19 +54,20 @@ function CategoryBadge({ category }: { category: CancerCategory }) {
 }
 
 // ── Video embed component ──────────────────────────────────────────────────
-function VideoEmbed({ VideoId, vimeoId, title, channel, durationMins }: {
-  VideoId?: string; vimeoId?: string; title: string; channel: string; durationMins?: number;
+function VideoEmbed({ youtubeId, vimeoId, title, channel, durationMins }: {
+  youtubeId?: string; vimeoId?: string; title: string; channel: string; durationMins?: number;
+})
 }) {
   const [active, setActive] = useState(false);
 
   const isVimeo = !!vimeoId;
   const videoSrc = isVimeo 
     ? `https://player.vimeo.com/video/${vimeoId}?autoplay=1`
-    : `https://www.Video.com/embed/${VideoId}?autoplay=1&rel=0`;
+    : `https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0`;
     
   const thumbSrc = isVimeo
     ? `https://vumbnail.com/${vimeoId}.jpg`
-    : `https://img.Video.com/vi/${VideoId}/mqdefault.jpg`;
+    : `https://img.youtube.com/vi/${youtubeId}/mqdefault.jpg`;
 
   if (active) {
     return (
@@ -94,7 +95,7 @@ function VideoEmbed({ VideoId, vimeoId, title, channel, durationMins }: {
         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         onError={(e) => {
           if (!isVimeo) {
-            (e.target as HTMLImageElement).src = `https://img.Video.com/vi/${VideoId}/default.jpg`;
+            (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${youtubeId}/default.jpg`;
           } else {
              (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1550837549-165f617631bd?q=80&w=400&fit=crop"; 
           }
@@ -288,8 +289,8 @@ function CancerDetailPanel({ cancer, onClose }: { cancer: CancerEntry; onClose: 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {cancer.videos.map((v, i) => (
                   <VideoEmbed
-                    key={v.VideoId || v.vimeoId || i}
-                    VideoId={v.VideoId}
+                    key={v.youtubeId || v.vimeoId || i}
+                    youtubeId={v.youtubeId}
                     vimeoId={v.vimeoId}
                     title={v.title}
                     channel={v.channel}

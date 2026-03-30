@@ -1,0 +1,1538 @@
+{
+  "metadata": {
+    "title": "CancerCompass — Comprehensive Cancer Knowledge Base",
+    "version": "1.0.0",
+    "lastUpdated": "2026-03-30",
+    "description": "A curated, A-Z reference guide for cancer types, treatments, costs, and support resources. Compiled for patients, caregivers, and families.",
+    "disclaimer": "This resource is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional for diagnosis and treatment decisions.",
+    "curators": ["KR CancerCompass Initiative"],
+    "primarySources": [
+      "National Cancer Institute (cancer.gov)",
+      "American Cancer Society (cancer.org)",
+      "World Health Organization (who.int)",
+      "NCCN Guidelines (nccn.org)",
+      "Indian Cancer Society (indiancancersociety.org)",
+      "Tata Memorial Centre (tmc.gov.in)",
+      "AIIMS Oncology",
+      "Cancer Research UK (cancerresearchuk.org)",
+      "OncoLink (oncolink.org)"
+    ]
+  },
+
+  "globalResources": {
+    "title": "Global Reference Organizations",
+    "items": [
+      {
+        "name": "National Cancer Institute (NCI)",
+        "url": "https://www.cancer.gov",
+        "description": "US government's principal agency for cancer research. Gold-standard A-Z cancer type information, clinical trials database, and treatment summaries.",
+        "type": "Research & Information",
+        "geography": "Global (US-based)"
+      },
+      {
+        "name": "American Cancer Society",
+        "url": "https://www.cancer.org",
+        "description": "Comprehensive cancer facts, figures, prevention guides, and patient support resources.",
+        "type": "Patient Support & Research",
+        "geography": "Global (US-based)"
+      },
+      {
+        "name": "World Health Organization — Cancer",
+        "url": "https://www.who.int/health-topics/cancer",
+        "description": "Global cancer data, prevention strategies, and policy frameworks.",
+        "type": "Policy & Epidemiology",
+        "geography": "Global"
+      },
+      {
+        "name": "NCCN Clinical Practice Guidelines",
+        "url": "https://www.nccn.org/guidelines/category_1",
+        "description": "Evidence-based treatment guidelines updated annually for all major cancer types. Used by oncologists worldwide.",
+        "type": "Clinical Guidelines",
+        "geography": "Global (US-based)"
+      },
+      {
+        "name": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov",
+        "description": "Database of privately and publicly funded clinical studies worldwide. Search by cancer type, location, and eligibility.",
+        "type": "Clinical Trials",
+        "geography": "Global"
+      },
+      {
+        "name": "OncoLink (UPenn)",
+        "url": "https://www.oncolink.org",
+        "description": "Patient-friendly cancer information from the University of Pennsylvania's cancer center.",
+        "type": "Patient Education",
+        "geography": "Global"
+      },
+      {
+        "name": "Cancer Research UK",
+        "url": "https://www.cancerresearchuk.org",
+        "description": "UK's leading cancer research charity with extensive patient and carer resources.",
+        "type": "Research & Patient Support",
+        "geography": "UK / Global"
+      },
+      {
+        "name": "IARC — International Agency for Research on Cancer",
+        "url": "https://www.iarc.who.int",
+        "description": "WHO's cancer research arm. GLOBOCAN database for global cancer statistics.",
+        "type": "Epidemiology",
+        "geography": "Global"
+      },
+      {
+        "name": "PubMed Cancer Research",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=cancer",
+        "description": "Free access to biomedical literature. Search for latest cancer research papers.",
+        "type": "Research Literature",
+        "geography": "Global"
+      },
+      {
+        "name": "American Association for Cancer Research (AACR)",
+        "url": "https://www.aacr.org",
+        "description": "World's oldest and largest professional organization for cancer researchers.",
+        "type": "Research",
+        "geography": "Global"
+      }
+    ]
+  },
+
+  "geographyResources": {
+    "india": {
+      "title": "India — Cancer Resources",
+      "overview": "India accounts for approximately 1.4 million new cancer cases annually (ICMR 2024). Oral, breast, cervical, and lung cancers are among the most prevalent. Government schemes like Ayushman Bharat PM-JAY cover up to ₹5 lakh per family per year for cancer treatment.",
+      "govtSchemes": [
+        {
+          "name": "Ayushman Bharat PM-JAY",
+          "url": "https://pmjay.gov.in",
+          "description": "Health insurance coverage up to ₹5 lakh/year for economically vulnerable families. Covers cancer surgeries, chemo, and radiation.",
+          "type": "Government Insurance"
+        },
+        {
+          "name": "Pradhan Mantri National Relief Fund",
+          "url": "https://pmnrf.gov.in",
+          "description": "Financial assistance for cancer treatment of the poor. Applications through the PM's office.",
+          "type": "Financial Aid"
+        },
+        {
+          "name": "National Cancer Grid India (NCG)",
+          "url": "https://www.tmc.gov.in/ncg/",
+          "description": "Network of 270+ cancer centres across India for uniform, affordable care.",
+          "type": "Hospital Network"
+        },
+        {
+          "name": "ICMR — National Cancer Registry Programme",
+          "url": "https://ncdirindia.org/",
+          "description": "India's cancer incidence, prevalence, and mortality data.",
+          "type": "Epidemiology"
+        }
+      ],
+      "hospitals": [
+        {
+          "name": "Tata Memorial Centre (TMC), Mumbai",
+          "url": "https://www.tmc.gov.in",
+          "phone": "+91-22-2417-7000",
+          "city": "Mumbai",
+          "tier": "Premier",
+          "description": "India's apex cancer hospital under the Department of Atomic Energy. Provides subsidised treatment to BPL patients."
+        },
+        {
+          "name": "AIIMS Oncology, New Delhi",
+          "url": "https://www.aiims.edu/en/departments-and-centres/oncology.html",
+          "phone": "+91-11-2658-8500",
+          "city": "New Delhi",
+          "tier": "Premier",
+          "description": "AIIMS offers comprehensive cancer care. Subsidised treatment for economically weaker sections."
+        },
+        {
+          "name": "Cancer Institute (WIA), Chennai",
+          "url": "https://www.cancerinstitutewia.edu.in",
+          "phone": "+91-44-2235-0241",
+          "city": "Chennai",
+          "tier": "Premier",
+          "description": "One of India's oldest dedicated cancer centres. Known for breast and gynaecological cancers."
+        },
+        {
+          "name": "Kidwai Memorial Institute of Oncology, Bengaluru",
+          "url": "https://kidwai.kar.nic.in",
+          "phone": "+91-80-2657-2222",
+          "city": "Bengaluru",
+          "tier": "State Premier",
+          "description": "Karnataka's premier cancer hospital with subsidised care for BPL patients."
+        },
+        {
+          "name": "Apollo Cancer Centres",
+          "url": "https://apollohospitals.com/cancer-care",
+          "phone": "1860-500-1066",
+          "city": "Pan-India",
+          "tier": "Private",
+          "description": "14 dedicated cancer centres across India. Comprehensive care including proton therapy."
+        },
+        {
+          "name": "Rajiv Gandhi Cancer Institute, Delhi",
+          "url": "https://www.rgcirc.org",
+          "phone": "+91-11-4700-2222",
+          "city": "New Delhi",
+          "tier": "Private",
+          "description": "Comprehensive cancer care with bone marrow transplant and robotic surgery."
+        },
+        {
+          "name": "HCG (Healthcare Global) Oncology",
+          "url": "https://www.hcgoncology.com",
+          "phone": "1800-108-1990",
+          "city": "Pan-India (Bengaluru HQ)",
+          "tier": "Private",
+          "description": "India's largest dedicated oncology network with 40+ centres."
+        },
+        {
+          "name": "NIMHANS / JIPMER Puducherry",
+          "url": "https://jipmer.edu.in",
+          "phone": "+91-413-2296-000",
+          "city": "Puducherry",
+          "tier": "Premier Central",
+          "description": "Subsidised cancer care, especially for South Indian population."
+        }
+      ],
+      "ngos": [
+        {
+          "name": "Indian Cancer Society (ICS)",
+          "url": "https://www.indiancancersociety.org",
+          "helpline": "1800-22-1951",
+          "description": "India's oldest cancer NGO (est. 1951). Cancer helpline, early detection camps, free mammography.",
+          "services": ["Helpline", "Screening Camps", "Financial Aid", "Rehabilitation"]
+        },
+        {
+          "name": "Cancer Patients Aid Association (CPAA)",
+          "url": "https://cancer.org.in",
+          "helpline": "+91-22-2413-9445",
+          "description": "Est. 1969. Free chemotherapy support, prosthetics, counselling, anti-tobacco awareness.",
+          "services": ["Free Chemo", "Prosthetics", "Counselling", "Awareness"]
+        },
+        {
+          "name": "CanSupport (Delhi)",
+          "url": "https://cansupport.org",
+          "helpline": "+91-11-4101-0539 / +91-98990-11212",
+          "description": "India's largest home-based palliative care program. Free services for advanced cancer patients in Delhi-NCR and 6+ states.",
+          "services": ["Home Palliative Care", "Counselling", "Peer Support", "Training"]
+        },
+        {
+          "name": "YouWeCan Foundation (Yuvraj Singh)",
+          "url": "https://yuvrajsingh.org/youwecan",
+          "description": "Cancer awareness, early detection, and education. Youth-driven approach.",
+          "services": ["Awareness", "Early Detection", "Survivor Support"]
+        },
+        {
+          "name": "V Care Foundation",
+          "url": "https://vcarefoundation.org",
+          "description": "Holistic healing and patient support. Financial assistance, counselling, support groups.",
+          "services": ["Financial Aid", "Counselling", "Support Groups", "Holistic Care"]
+        },
+        {
+          "name": "CanKids KidsCan (Paediatric)",
+          "url": "https://www.cankids.org",
+          "helpline": "+91-11-4353-9999",
+          "description": "Holistic support for children with cancer and families. Home Away From Home facilities. School Canshala.",
+          "services": ["Accommodation", "Education", "Palliative Care", "Financial Aid"]
+        },
+        {
+          "name": "CopewithCancer.org",
+          "url": "https://www.copewithcancer.org",
+          "description": "Financial aid for investigations, discounts on chemo/radiotherapy/surgery for economically challenged patients in Mumbai.",
+          "services": ["Financial Aid", "Treatment Discounts", "Guidance"]
+        },
+        {
+          "name": "Cancer Foundation of India (CFI)",
+          "url": "https://cficancer.org",
+          "description": "Est. 2002. Cancer prevention, HPV vaccination, tobacco control, cervical cancer awareness.",
+          "services": ["Prevention", "HPV Vaccination", "Awareness", "Screening"]
+        },
+        {
+          "name": "Cuddles Foundation (Paediatric Nutrition)",
+          "url": "https://www.cuddlesfoundation.org",
+          "description": "Nutritional support for children with cancer in 30+ hospitals across 20 Indian cities.",
+          "services": ["Nutrition Support", "Food Supplements"]
+        },
+        {
+          "name": "St. Jude India ChildCare Centres",
+          "url": "https://stjudeindia.org",
+          "description": "Free accommodation and holistic care for children undergoing cancer treatment.",
+          "services": ["Accommodation", "Nutrition", "Psychological Support"]
+        }
+      ],
+      "financialAid": [
+        {
+          "name": "CancerAssist.in — NGO Directory",
+          "url": "https://www.cancerassist.in/financial-help-for-needy-patients",
+          "description": "Comprehensive directory of 50+ NGOs and trusts providing financial aid for cancer treatment across India."
+        },
+        {
+          "name": "Milaap / Ketto / ImpactGuru (Crowdfunding)",
+          "urls": [
+            "https://milaap.org",
+            "https://www.ketto.org",
+            "https://www.impactguru.com"
+          ],
+          "description": "India's leading crowdfunding platforms. Thousands of verified cancer patient campaigns."
+        },
+        {
+          "name": "Tata 1mg Cancer Care NGO List",
+          "url": "https://www.1mg.com/cancer-care/Seek-NGOs-Support",
+          "description": "Curated list of NGOs providing cancer support — palliative, financial, emotional."
+        }
+      ],
+      "hyderabad": {
+        "title": "Hyderabad Cancer Resources",
+        "hospitals": [
+          {
+            "name": "MNJ Institute of Oncology & Regional Cancer Centre",
+            "address": "Red Hills, Hyderabad 500004",
+            "phone": "+91-40-2345-4567",
+            "description": "Telangana government's apex cancer hospital. Heavily subsidised care."
+          },
+          {
+            "name": "Basavatarakam Indo-American Cancer Hospital",
+            "url": "https://www.cancerhospital.co.in",
+            "phone": "+91-40-2355-4401",
+            "description": "One of Hyderabad's premier cancer hospitals. Comprehensive oncology services."
+          },
+          {
+            "name": "Apollo Cancer Centre, Hyderabad",
+            "url": "https://apollohospitals.com/cancer-care",
+            "phone": "+91-40-2360-7777",
+            "description": "Full oncology suite including robotic surgery and bone marrow transplant."
+          },
+          {
+            "name": "Yashoda Cancer Centre, Hyderabad",
+            "url": "https://www.yashodahospitals.com",
+            "description": "Comprehensive cancer care with advanced radiation oncology."
+          },
+          {
+            "name": "American Oncology Institute (AOI), Hyderabad",
+            "url": "https://www.americanoncologyinstitute.com",
+            "phone": "+91-40-6789-0000",
+            "description": "US-benchmarked protocols. Radiation and medical oncology."
+          }
+        ]
+      },
+      "chennai": {
+        "title": "Chennai Cancer Resources",
+        "hospitals": [
+          {
+            "name": "Cancer Institute (WIA), Adyar",
+            "url": "https://www.cancerinstitutewia.edu.in",
+            "phone": "+91-44-2235-0241"
+          },
+          {
+            "name": "Apollo Proton Cancer Centre, Chennai",
+            "url": "https://apolloproton.com",
+            "phone": "+91-44-6700-0000",
+            "description": "India's first and largest proton therapy centre."
+          },
+          {
+            "name": "MIOT International, Chennai",
+            "url": "https://www.miotinternational.com",
+            "description": "Multi-specialty with dedicated oncology division."
+          },
+          {
+            "name": "Global Hospitals, Chennai",
+            "url": "https://www.globalhospitalsindia.com",
+            "description": "Oncology and BMT services."
+          }
+        ]
+      }
+    },
+    "usa": {
+      "title": "United States — Cancer Resources",
+      "overview": "The US has the world's most advanced cancer research infrastructure. Approximately 2 million new cancer diagnoses are expected in 2025. Medicare, Medicaid, and ACA marketplaces cover most cancer treatments.",
+      "resources": [
+        { "name": "NCI Cancer Information Service", "url": "https://www.cancer.gov/contact", "helpline": "1-800-4-CANCER (1-800-422-6237)" },
+        { "name": "American Cancer Society", "url": "https://www.cancer.org", "helpline": "1-800-227-2345" },
+        { "name": "CancerCare", "url": "https://www.cancercare.org", "helpline": "1-800-813-4673", "description": "Free professional support services including counselling and financial assistance." },
+        { "name": "Cancer Financial Assistance Coalition (CFAC)", "url": "https://www.cancerfac.org", "description": "Directory of financial aid programs for US cancer patients." },
+        { "name": "Medicare Cancer Coverage", "url": "https://www.medicare.gov/what-medicare-covers/what-part-b-covers/chemotherapy", "description": "Medicare Part B and Part D coverage for cancer treatment." },
+        { "name": "Patient Advocate Foundation", "url": "https://www.patientadvocate.org", "helpline": "1-800-532-5274" },
+        { "name": "NeedyMeds — Drug Assistance", "url": "https://www.needymeds.org", "description": "Find patient assistance programs for expensive cancer drugs." },
+        { "name": "National Coalition for Cancer Survivorship", "url": "https://www.canceradvocacy.org", "description": "Advocacy and survivorship resources." }
+      ],
+      "topHospitals": [
+        { "name": "MD Anderson Cancer Center (Houston)", "url": "https://www.mdanderson.org" },
+        { "name": "Memorial Sloan Kettering (New York)", "url": "https://www.mskcc.org" },
+        { "name": "Mayo Clinic Cancer Center", "url": "https://www.mayoclinic.org/departments-centers/mayo-clinic-cancer-center" },
+        { "name": "Cleveland Clinic Taussig Cancer Institute", "url": "https://my.clevelandclinic.org/departments/cancer" },
+        { "name": "Johns Hopkins Sidney Kimmel Cancer Center", "url": "https://www.hopkinsmedicine.org/kimmel_cancer_center" },
+        { "name": "Dana-Farber Cancer Institute (Boston)", "url": "https://www.dana-farber.org" },
+        { "name": "Stanford Cancer Institute", "url": "https://cancer.stanford.edu" },
+        { "name": "Fred Hutchinson Cancer Center (Seattle)", "url": "https://www.fredhutch.org" }
+      ]
+    },
+    "uk": {
+      "title": "United Kingdom — Cancer Resources",
+      "resources": [
+        { "name": "Cancer Research UK", "url": "https://www.cancerresearchuk.org", "helpline": "0808-800-4040" },
+        { "name": "Macmillan Cancer Support", "url": "https://www.macmillan.org.uk", "helpline": "0808-808-0000", "description": "Comprehensive support covering emotional, financial, and practical needs." },
+        { "name": "Maggie's Cancer Centres", "url": "https://www.maggies.org", "description": "Drop-in cancer support centres across the UK." },
+        { "name": "NHS Cancer Information", "url": "https://www.nhs.uk/conditions/cancer", "description": "NHS guidance on cancer symptoms, diagnosis, and treatment." },
+        { "name": "Marie Curie (Palliative)", "url": "https://www.mariecurie.org.uk", "helpline": "0800-090-2309" }
+      ]
+    },
+    "australia": {
+      "title": "Australia — Cancer Resources",
+      "resources": [
+        { "name": "Cancer Australia", "url": "https://www.canceraustralia.gov.au" },
+        { "name": "Cancer Council Australia", "url": "https://www.cancer.org.au", "helpline": "13 11 20" },
+        { "name": "Leukaemia Foundation", "url": "https://www.leukaemia.org.au" },
+        { "name": "Peter MacCallum Cancer Centre (Melbourne)", "url": "https://www.petermac.org" }
+      ]
+    },
+    "canada": {
+      "title": "Canada — Cancer Resources",
+      "resources": [
+        { "name": "Canadian Cancer Society", "url": "https://www.cancer.ca", "helpline": "1-888-939-3333" },
+        { "name": "BC Cancer", "url": "https://www.bccancer.bc.ca" },
+        { "name": "Princess Margaret Cancer Centre (Toronto)", "url": "https://www.uhn.ca/PrincessMargaret" }
+      ]
+    },
+    "uae": {
+      "title": "UAE / Middle East — Cancer Resources",
+      "resources": [
+        { "name": "Dubai Health Authority Cancer", "url": "https://www.dha.gov.ae/cancer" },
+        { "name": "Cleveland Clinic Abu Dhabi Oncology", "url": "https://www.clevelandclinicabudhabi.ae/en/cancer-care" },
+        { "name": "American Hospital Dubai Oncology", "url": "https://www.ahdubai.com/specialties/oncology" },
+        { "name": "Cancer Patients Support Group UAE", "url": "https://www.cpsguae.org" }
+      ]
+    }
+  },
+
+  "treatmentModalities": {
+    "title": "Cancer Treatment Modalities",
+    "items": [
+      {
+        "id": "surgery",
+        "name": "Surgery",
+        "description": "Physical removal of tumour and surrounding tissue. The oldest and most direct form of cancer treatment.",
+        "subtypes": ["Open Surgery", "Laparoscopic (Minimally Invasive)", "Robotic-Assisted (da Vinci)", "Cryosurgery", "Laser Surgery", "Mohs Surgery (skin)", "Cytoreductive Surgery"],
+        "usedFor": "Solid tumours — breast, colon, lung, prostate, gynaecological cancers",
+        "costRange": { "india": "₹50,000 – ₹8,00,000 (varies widely)", "usa": "$5,000 – $100,000+", "uk": "Covered by NHS" },
+        "resources": [
+          { "name": "NCI Surgery Page", "url": "https://www.cancer.gov/about-cancer/treatment/types/surgery" }
+        ]
+      },
+      {
+        "id": "chemotherapy",
+        "name": "Chemotherapy",
+        "description": "Use of cytotoxic drugs to kill rapidly dividing cancer cells. Can be curative, adjuvant, or palliative.",
+        "subtypes": ["Standard Chemo", "Neoadjuvant", "Adjuvant", "Palliative", "Combination Regimens (FOLFOX, CHOP, etc.)"],
+        "usedFor": "Wide range — leukaemias, lymphomas, solid tumours",
+        "costRange": { "india": "₹10,000 – ₹2,50,000 per cycle", "usa": "$3,000 – $30,000+ per cycle", "uk": "NHS covered" },
+        "resources": [
+          { "name": "ACS Chemotherapy Guide", "url": "https://www.cancer.org/treatment/treatments-and-side-effects/treatment-types/chemotherapy.html" },
+          { "name": "Chemo Care", "url": "https://www.chemocare.com" }
+        ]
+      },
+      {
+        "id": "radiation_therapy",
+        "name": "Radiation Therapy",
+        "description": "Use of high-energy radiation (X-rays, protons, gamma rays) to destroy cancer cells.",
+        "subtypes": ["External Beam Radiation (EBRT)", "IMRT (Intensity-Modulated)", "IGRT (Image-Guided)", "Stereotactic Body (SBRT/SRS)", "Proton Therapy", "Brachytherapy (Internal)"],
+        "usedFor": "Breast, lung, prostate, head & neck, brain cancers",
+        "costRange": { "india": "₹1,50,000 – ₹5,00,000 per course", "usa": "$10,000 – $50,000+", "protonTherapyIndia": "Apollo Proton Centre, Chennai: ₹15,00,000 – ₹30,00,000" },
+        "resources": [
+          { "name": "ACS Radiation Therapy", "url": "https://www.cancer.org/treatment/treatments-and-side-effects/treatment-types/radiation.html" },
+          { "name": "Apollo Proton Centre", "url": "https://apolloproton.com" }
+        ]
+      },
+      {
+        "id": "immunotherapy",
+        "name": "Immunotherapy",
+        "description": "Treatments that harness the immune system to fight cancer. Includes checkpoint inhibitors, CAR-T, and cancer vaccines.",
+        "subtypes": [
+          "Checkpoint Inhibitors (PD-1/PD-L1, CTLA-4 — Pembrolizumab/Keytruda, Nivolumab/Opdivo)",
+          "CAR-T Cell Therapy",
+          "Cancer Vaccines (Therapeutic)",
+          "Monoclonal Antibodies",
+          "Cytokines (Interleukins, Interferons)",
+          "BiTE (Bispecific T-cell Engagers)"
+        ],
+        "usedFor": "Melanoma, lung, kidney, bladder, lymphoma, leukaemia, and many more",
+        "costRange": { "india": "₹3,00,000 – ₹30,00,000+ per year", "usa": "$100,000 – $400,000+ per year" },
+        "resources": [
+          { "name": "Cancer Research Institute", "url": "https://www.cancerresearch.org/immunotherapy" },
+          { "name": "NCI Immunotherapy", "url": "https://www.cancer.gov/about-cancer/treatment/types/immunotherapy" }
+        ]
+      },
+      {
+        "id": "targeted_therapy",
+        "name": "Targeted Therapy",
+        "description": "Drugs that target specific molecular abnormalities in cancer cells (e.g., EGFR, HER2, BRAF, BCR-ABL mutations).",
+        "subtypes": ["Tyrosine Kinase Inhibitors (TKIs)", "HER2 inhibitors (Trastuzumab)", "BRAF inhibitors", "CDK4/6 inhibitors", "PARP inhibitors", "VEGF inhibitors", "ALK inhibitors"],
+        "usedFor": "Breast (HER2+), lung (EGFR/ALK), melanoma (BRAF), CML (BCR-ABL), and many others",
+        "costRange": { "india": "₹2,00,000 – ₹20,00,000+ per year", "usa": "$50,000 – $200,000+ per year" },
+        "resources": [
+          { "name": "NCI Targeted Therapy", "url": "https://www.cancer.gov/about-cancer/treatment/types/targeted-therapies" }
+        ]
+      },
+      {
+        "id": "hormone_therapy",
+        "name": "Hormone Therapy",
+        "description": "Reduces or blocks hormones that fuel certain cancers (oestrogen, testosterone). Also called endocrine therapy.",
+        "subtypes": ["Aromatase Inhibitors (Anastrozole, Letrozole)", "SERMs (Tamoxifen)", "LHRH Agonists", "Anti-androgens (Enzalutamide)", "Orchiectomy/Oophorectomy"],
+        "usedFor": "Breast cancer (ER+/PR+), Prostate cancer",
+        "costRange": { "india": "₹500 – ₹10,000/month (oral)", "usa": "$50 – $2,000/month" },
+        "resources": [
+          { "name": "ACS Hormone Therapy", "url": "https://www.cancer.org/treatment/treatments-and-side-effects/treatment-types/hormone-therapy.html" }
+        ]
+      },
+      {
+        "id": "bone_marrow_transplant",
+        "name": "Stem Cell / Bone Marrow Transplant (SCT/BMT)",
+        "description": "Replaces diseased bone marrow with healthy stem cells. Can be autologous (patient's own) or allogeneic (donor).",
+        "subtypes": ["Autologous SCT", "Allogeneic SCT", "Haploidentical Transplant", "Cord Blood Transplant"],
+        "usedFor": "Leukaemia, lymphoma, myeloma, aplastic anaemia",
+        "costRange": { "india": "₹8,00,000 – ₹30,00,000 (allogeneic)", "usa": "$100,000 – $300,000+" },
+        "resources": [
+          { "name": "Be The Match (Donor Registry)", "url": "https://bethematch.org" },
+          { "name": "DKMS India", "url": "https://www.dkms.org/en/india" }
+        ]
+      },
+      {
+        "id": "car_t_therapy",
+        "name": "CAR-T Cell Therapy",
+        "description": "Patient's T-cells are engineered to attack cancer. Breakthrough for certain blood cancers. Available in India since 2024.",
+        "subtypes": ["CD19 CAR-T (B-cell malignancies)", "BCMA CAR-T (Myeloma)"],
+        "usedFor": "Relapsed/refractory B-cell ALL, large B-cell lymphoma, multiple myeloma",
+        "costRange": { "india": "NexCAR19 (ImmunoACT): ~₹40,00,000", "usa": "$400,000 – $500,000" },
+        "resources": [
+          { "name": "ImmunoACT NexCAR19 (India)", "url": "https://www.immunoact.com" },
+          { "name": "NCI CAR-T", "url": "https://www.cancer.gov/about-cancer/treatment/research/car-t-cells" }
+        ]
+      },
+      {
+        "id": "precision_medicine",
+        "name": "Precision / Personalised Medicine & NGS",
+        "description": "Next-Generation Sequencing (NGS) of tumour DNA to identify actionable mutations and match targeted treatments.",
+        "subtypes": ["Liquid Biopsy (ctDNA)", "Tumour Molecular Profiling", "Germline Testing (BRCA, Lynch)", "Companion Diagnostics"],
+        "usedFor": "Lung, breast, colorectal, ovarian, and many other cancers",
+        "resources": [
+          { "name": "Foundation Medicine", "url": "https://www.foundationmedicine.com" },
+          { "name": "Guardant Health (Liquid Biopsy)", "url": "https://guardanthealth.com" }
+        ]
+      },
+      {
+        "id": "palliative_care",
+        "name": "Palliative & Supportive Care",
+        "description": "Specialised care focused on quality of life, symptom relief, and emotional support — at any stage of illness.",
+        "subtypes": ["Pain Management", "Nutritional Support", "Psychological Support", "Hospice Care", "Spiritual Care"],
+        "usedFor": "All cancer patients — not just end of life",
+        "resources": [
+          { "name": "CanSupport India (Free Home Palliative)", "url": "https://cansupport.org" },
+          { "name": "IAHPC Palliative Care Atlas", "url": "https://www.iahpc.com" },
+          { "name": "Pallium India", "url": "https://palliumindia.org" }
+        ]
+      },
+      {
+        "id": "clinical_trials",
+        "name": "Clinical Trials",
+        "description": "Research studies testing new treatments. Often provide access to cutting-edge therapies at reduced/no cost.",
+        "resources": [
+          { "name": "ClinicalTrials.gov", "url": "https://clinicaltrials.gov" },
+          { "name": "CTRI India (Clinical Trials Registry India)", "url": "https://ctri.nic.in" },
+          { "name": "NCI Clinical Trials Search", "url": "https://www.cancer.gov/about-cancer/treatment/clinical-trials/search" }
+        ]
+      }
+    ]
+  },
+
+  "cancerTypes": [
+    {
+      "id": "acute_lymphoblastic_leukemia",
+      "letter": "A",
+      "name": "Acute Lymphoblastic Leukaemia (ALL)",
+      "aliases": ["ALL", "Acute Lymphocytic Leukaemia"],
+      "icdCode": "C91.0",
+      "category": "Blood Cancer",
+      "description": "A fast-growing cancer of the lymphoid cells in bone marrow and blood. The most common childhood cancer, but also affects adults.",
+      "symptoms": ["Fatigue", "Pale skin", "Fever", "Easy bruising/bleeding", "Bone pain", "Swollen lymph nodes", "Shortness of breath"],
+      "riskFactors": ["Down syndrome", "Prior radiation or chemotherapy", "Certain genetic syndromes", "Male gender"],
+      "stages": "Philadelphia chromosome positive (Ph+) or negative (Ph-) ALL are key molecular classifications.",
+      "prevalence": { "global": "~400,000 annual cases", "india": "~30,000 children/year", "indianNote": "Most common paediatric cancer in India" },
+      "treatments": ["Chemotherapy (multi-agent regimens: VDLP, HyperCVAD)", "Targeted therapy (imatinib for Ph+ ALL)", "Steroids", "CNS prophylaxis", "Bone marrow transplant", "CAR-T cell therapy (relapsed cases)"],
+      "survivalRates": { "childrenUnder15": "~90% 5-year survival (US data)", "adults": "~35–40% 5-year survival" },
+      "resources": [
+        { "name": "NCI ALL", "url": "https://www.cancer.gov/types/leukemia/patient/adult-all-treatment-pdq" },
+        { "name": "LLS (Leukemia & Lymphoma Society)", "url": "https://www.lls.org/leukemia/acute-lymphoblastic-leukemia" },
+        { "name": "St. Jude's ALL Research", "url": "https://www.stjude.org/disease/acute-lymphoblastic-leukemia.html" }
+      ],
+      "indiaContext": "CanKids KidsCan (Delhi) and St. Jude India provide support. Tata Memorial Centre, Mumbai is the premier treatment centre. ICMR-funded paediatric oncology protocols."
+    },
+    {
+      "id": "acute_myeloid_leukemia",
+      "letter": "A",
+      "name": "Acute Myeloid Leukaemia (AML)",
+      "aliases": ["AML", "Acute Myelogenous Leukaemia"],
+      "icdCode": "C92.0",
+      "category": "Blood Cancer",
+      "description": "A rapidly progressing cancer of the myeloid blood cells. More common in older adults.",
+      "symptoms": ["Fatigue", "Fever", "Night sweats", "Weight loss", "Unusual bleeding", "Bone pain", "Frequent infections"],
+      "riskFactors": ["Age >60", "Prior chemotherapy or radiation", "Smoking", "Benzene exposure", "Myelodysplastic syndrome"],
+      "treatments": ["Induction chemotherapy (7+3: cytarabine + anthracycline)", "Targeted therapy (venetoclax for elderly)", "Bone marrow transplant (consolidation)", "FLT3 inhibitors (midostaurin)", "IDH inhibitors (enasidenib, ivosidenib)"],
+      "survivalRates": { "overall": "~28% 5-year survival (US)", "elderly": "~10% 5-year survival in >65" },
+      "resources": [
+        { "name": "NCI AML Treatment", "url": "https://www.cancer.gov/types/leukemia/hp/adult-aml-treatment-pdq" },
+        { "name": "ACS AML", "url": "https://www.cancer.org/cancer/types/acute-myeloid-leukemia.html" }
+      ]
+    },
+    {
+      "id": "adrenal_cancer",
+      "letter": "A",
+      "name": "Adrenal Gland Cancer (Adrenocortical Carcinoma)",
+      "aliases": ["ACC", "Adrenocortical Carcinoma"],
+      "icdCode": "C74",
+      "category": "Endocrine",
+      "description": "A rare cancer arising from the outer cortex of the adrenal glands. Often diagnosed at an advanced stage.",
+      "symptoms": ["Abdominal pain", "Hormonal symptoms (Cushing's, virilisation)", "Weight loss", "Fatigue"],
+      "treatments": ["Surgery (adrenalectomy)", "Mitotane (adrenocortical drug)", "Chemotherapy (EDP: etoposide/doxorubicin/cisplatin)", "Radiation"],
+      "resources": [
+        { "name": "NCI Adrenal Gland Tumours", "url": "https://www.cancer.gov/types/adrenocortical" }
+      ]
+    },
+    {
+      "id": "anal_cancer",
+      "letter": "A",
+      "name": "Anal Cancer",
+      "aliases": ["Anal Carcinoma", "Squamous Cell Carcinoma of the Anus"],
+      "icdCode": "C21",
+      "category": "GI Cancer",
+      "description": "Cancer of the anus or anal canal. Most commonly associated with HPV infection.",
+      "symptoms": ["Rectal bleeding", "Anal pain", "Anal itching", "Change in bowel habits", "Lump near the anus"],
+      "riskFactors": ["HPV infection", "HIV", "Multiple sexual partners", "Anal intercourse", "Smoking"],
+      "treatments": ["Chemoradiation (Nigro protocol: 5-FU + mitomycin C + radiation)", "Surgery (APR for refractory cases)", "Immunotherapy (pembrolizumab for metastatic)"],
+      "resources": [
+        { "name": "NCI Anal Cancer", "url": "https://www.cancer.gov/types/anal" }
+      ]
+    },
+    {
+      "id": "appendix_cancer",
+      "letter": "A",
+      "name": "Appendix Cancer",
+      "aliases": ["Appendiceal Cancer", "PMP (Pseudomyxoma Peritonei)"],
+      "icdCode": "C18.1",
+      "category": "GI Cancer",
+      "description": "A rare cancer of the appendix. Often found incidentally during appendectomy. PMP (mucus-producing) is a notable subtype.",
+      "symptoms": ["Appendicitis-like symptoms", "Abdominal bloating", "Ovarian mass (in women)", "Often asymptomatic"],
+      "treatments": ["Surgery (appendectomy, right hemicolectomy)", "CRS + HIPEC (Cytoreductive Surgery + Hyperthermic Intraperitoneal Chemotherapy) for PMP"],
+      "resources": [
+        { "name": "NCI Appendix Cancer", "url": "https://www.cancer.gov/types/appendix" }
+      ]
+    },
+    {
+      "id": "bladder_cancer",
+      "letter": "B",
+      "name": "Bladder Cancer",
+      "aliases": ["Transitional Cell Carcinoma", "Urothelial Carcinoma"],
+      "icdCode": "C67",
+      "category": "Urological Cancer",
+      "description": "Cancer arising from the lining of the bladder (urothelium). More common in men. Strongly linked to smoking.",
+      "symptoms": ["Blood in urine (haematuria)", "Frequent urination", "Painful urination", "Pelvic pain"],
+      "riskFactors": ["Smoking (50% of cases)", "Chemical exposure (aromatic amines)", "Chronic bladder irritation", "Age >55"],
+      "stages": "Non-muscle-invasive (NMIBC) vs. Muscle-invasive (MIBC) — critical clinical distinction.",
+      "treatments": ["TURBT (endoscopic resection) for early stage", "BCG immunotherapy (intravesical)", "Cystectomy (radical/partial)", "Cisplatin-based chemotherapy", "Immunotherapy (atezolizumab, pembrolizumab)", "Erdafitinib (FGFR-targeted)"],
+      "survivalRates": { "stage1": "~88% 5-year", "stage4": "~5% 5-year" },
+      "resources": [
+        { "name": "NCI Bladder Cancer", "url": "https://www.cancer.gov/types/bladder" },
+        { "name": "BCAN (Bladder Cancer Advocacy Network)", "url": "https://www.bcan.org" }
+      ]
+    },
+    {
+      "id": "bone_cancer",
+      "letter": "B",
+      "name": "Bone Cancer (Primary)",
+      "aliases": ["Osteosarcoma", "Ewing Sarcoma", "Chondrosarcoma"],
+      "icdCode": "C40–C41",
+      "category": "Sarcoma",
+      "description": "Primary bone cancers arise in bone tissue itself. Osteosarcoma is the most common primary bone cancer, predominantly in children and young adults.",
+      "subtypes": [
+        { "name": "Osteosarcoma", "description": "Most common; affects long bones in young people" },
+        { "name": "Ewing Sarcoma", "description": "Second most common; affects children/young adults" },
+        { "name": "Chondrosarcoma", "description": "Arises from cartilage; more common in adults" }
+      ],
+      "symptoms": ["Bone pain", "Swelling near bone", "Fracture without injury", "Restricted joint movement"],
+      "treatments": ["Surgery (limb-sparing or amputation)", "Chemotherapy (MAP protocol: methotrexate/adriamycin/cisplatin)", "Radiation (especially Ewing)", "Targeted therapy (denosumab for GCTB)"],
+      "resources": [
+        { "name": "NCI Bone Cancer", "url": "https://www.cancer.gov/types/bone" },
+        { "name": "Bone Cancer Research Trust (UK)", "url": "https://www.bcrt.org.uk" }
+      ]
+    },
+    {
+      "id": "brain_tumour",
+      "letter": "B",
+      "name": "Brain Tumour (Brain Cancer)",
+      "aliases": ["Glioblastoma", "GBM", "Meningioma", "Astrocytoma", "Medulloblastoma"],
+      "icdCode": "C71",
+      "category": "CNS Cancer",
+      "description": "Tumours originating in the brain (primary) or spreading to the brain from other sites (secondary/metastatic). Glioblastoma (GBM) is the most aggressive primary brain tumour.",
+      "subtypes": [
+        { "name": "Glioblastoma (GBM)", "grade": "Grade IV", "prognosis": "Median survival 14–16 months" },
+        { "name": "Low-grade Glioma (LGG)", "grade": "Grade I–II", "prognosis": "5–15+ years" },
+        { "name": "Meningioma", "origin": "Brain lining", "note": "Often benign" },
+        { "name": "Medulloblastoma", "note": "Most common malignant paediatric brain tumour" }
+      ],
+      "symptoms": ["Persistent headaches (worse in morning)", "Seizures", "Memory/cognitive changes", "Vision/speech problems", "Nausea/vomiting", "Personality changes"],
+      "treatments": ["Surgery (craniotomy)", "Radiation (WBRT, SRS/SBRT)", "Temozolomide (TMZ) chemotherapy", "Bevacizumab (anti-VEGF)", "Tumour Treating Fields (Optune device)", "Dordaviprone (FDA-approved 2025 for DMG H3K27M)"],
+      "resources": [
+        { "name": "NCI Brain Tumour", "url": "https://www.cancer.gov/types/brain" },
+        { "name": "NBTS (National Brain Tumour Society)", "url": "https://www.braintumor.org" },
+        { "name": "IBTA (International Brain Tumour Alliance)", "url": "https://www.theibta.org" }
+      ]
+    },
+    {
+      "id": "breast_cancer",
+      "letter": "B",
+      "name": "Breast Cancer",
+      "aliases": ["BC", "Mammary Carcinoma"],
+      "icdCode": "C50",
+      "category": "Breast Cancer",
+      "description": "The most common cancer in women worldwide. Originates in breast ducts or lobules. Multiple molecular subtypes (HR+, HER2+, Triple Negative) guide treatment.",
+      "subtypes": [
+        { "name": "Hormone Receptor Positive (ER+/PR+)", "frequency": "~70% of cases", "treatment": "Hormone therapy + CDK4/6 inhibitors" },
+        { "name": "HER2-Positive", "frequency": "~20%", "treatment": "Trastuzumab, pertuzumab, T-DM1, tucatinib" },
+        { "name": "Triple Negative (TNBC)", "frequency": "~15%", "treatment": "Chemotherapy, immunotherapy (pembrolizumab), PARP inhibitors (BRCA+)" },
+        { "name": "Luminal A/B (molecular)", "note": "Gene expression classification" },
+        { "name": "DCIS (Ductal Carcinoma In Situ)", "note": "Stage 0; often curable" }
+      ],
+      "symptoms": ["Painless breast lump", "Nipple discharge/inversion", "Skin dimpling/redness", "Axillary lymphadenopathy", "Breast pain"],
+      "riskFactors": ["Female gender", "BRCA1/2 mutation", "Family history", "Age", "Dense breasts", "Obesity", "HRT use", "Late first pregnancy"],
+      "screening": { "method": "Mammography", "recommendation": "Annual from age 40–45 (US); 50 in UK NHS; earlier with risk factors" },
+      "treatments": ["Surgery (lumpectomy/mastectomy)", "Radiation", "Hormone therapy (tamoxifen, aromatase inhibitors)", "Chemotherapy", "Targeted (trastuzumab/HER2)", "CDK4/6 inhibitors (palbociclib, ribociclib)", "PARP inhibitors (BRCA mutated)", "Immunotherapy (TNBC)"],
+      "costs": {
+        "india": "₹3,00,000 – ₹15,00,000 for full treatment course",
+        "usa": "$50,000 – $200,000+ without insurance"
+      },
+      "survivalRates": { "stage1": ">99% 5-year", "stage2": "~86%", "stage3": "~72%", "stage4": "~28%" },
+      "resources": [
+        { "name": "NCI Breast Cancer", "url": "https://www.cancer.gov/types/breast" },
+        { "name": "Susan G. Komen", "url": "https://www.komen.org" },
+        { "name": "Breast Cancer Now (UK)", "url": "https://breastcancernow.org" },
+        { "name": "BCF India", "url": "https://breastcancerfoundationindia.org" },
+        { "name": "iCanCer Help India", "url": "https://www.icancerhelp.in" }
+      ],
+      "indiaContext": "Second most common cancer in Indian women after cervical cancer in rural areas; first in urban. Maina Foundation and Indian Cancer Society offer free screening. HPV not relevant here; genetic testing for BRCA1/2 available at TATA Memorial, Strand Life Sciences."
+    },
+    {
+      "id": "cervical_cancer",
+      "letter": "C",
+      "name": "Cervical Cancer",
+      "aliases": ["Cancer of the Cervix", "SCC of Cervix"],
+      "icdCode": "C53",
+      "category": "Gynaecological Cancer",
+      "description": "Cancer of the lower uterus (cervix), overwhelmingly caused by persistent HPV infection. Largely preventable through vaccination and screening.",
+      "symptoms": ["Abnormal vaginal bleeding (post-coital, intermenstrual)", "Pelvic pain", "Unusual vaginal discharge", "Often asymptomatic in early stages"],
+      "riskFactors": ["HPV infection (types 16, 18)", "Multiple sexual partners", "Smoking", "Immunosuppression (HIV)", "Long-term OCP use"],
+      "prevention": { "vaccine": "HPV vaccines (Cervarix, Gardasil, Cervavac)", "screening": "Pap smear every 3 years (21–65); HPV co-test every 5 years (30–65)" },
+      "treatments": ["Surgery (LEEP, cone biopsy, hysterectomy, radical hysterectomy)", "Chemoradiation (cisplatin-based)", "Brachytherapy", "Immunotherapy (pembrolizumab for recurrent/metastatic)"],
+      "costs": { "india": "₹80,000 – ₹5,00,000", "usa": "$20,000 – $80,000+" },
+      "survivalRates": { "stage1": "~92% 5-year", "stage4": "~16%" },
+      "resources": [
+        { "name": "NCI Cervical Cancer", "url": "https://www.cancer.gov/types/cervical" },
+        { "name": "WHO HPV Programme", "url": "https://www.who.int/news-room/fact-sheets/detail/human-papillomavirus-(hpv)-and-cervical-cancer" },
+        { "name": "CAPED India (Awareness)", "url": "https://caped.org.in" }
+      ],
+      "indiaContext": "India has the world's highest burden of cervical cancer — 1 in 3 global deaths. India launched Cervavac (indigenous HPV vaccine) in 2023. Ayushman Bharat now covers cervical screening."
+    },
+    {
+      "id": "chronic_lymphocytic_leukemia",
+      "letter": "C",
+      "name": "Chronic Lymphocytic Leukaemia (CLL)",
+      "aliases": ["CLL", "SLL (Small Lymphocytic Lymphoma)"],
+      "icdCode": "C91.1",
+      "category": "Blood Cancer",
+      "description": "The most common leukaemia in adults. A slow-growing cancer of B-lymphocytes. Often watch-and-wait at early stages.",
+      "symptoms": ["Swollen lymph nodes", "Fatigue", "Night sweats", "Weight loss", "Frequent infections"],
+      "riskFactors": ["Age >60", "Male gender", "Family history", "Caucasian ethnicity"],
+      "treatments": ["Watch and wait (early stage)", "BTK inhibitors (ibrutinib, acalabrutinib)", "BCL-2 inhibitor (venetoclax)", "Chemoimmunotherapy (FCR, BR regimen)", "Anti-CD20 antibodies (obinutuzumab, rituximab)"],
+      "resources": [
+        { "name": "NCI CLL", "url": "https://www.cancer.gov/types/leukemia/patient/cll-treatment-pdq" },
+        { "name": "CLL Society", "url": "https://cllsociety.org" }
+      ]
+    },
+    {
+      "id": "chronic_myeloid_leukemia",
+      "letter": "C",
+      "name": "Chronic Myeloid Leukaemia (CML)",
+      "aliases": ["CML", "Chronic Granulocytic Leukaemia"],
+      "icdCode": "C92.1",
+      "category": "Blood Cancer",
+      "description": "Characterised by the Philadelphia chromosome (BCR-ABL fusion gene). Now largely manageable with targeted therapy.",
+      "symptoms": ["Fatigue", "Night sweats", "Abdominal fullness (splenomegaly)", "Weight loss", "Often found incidentally on CBC"],
+      "treatments": ["Tyrosine Kinase Inhibitors (imatinib/Gleevec — first line; dasatinib, nilotinib, ponatinib for resistance/intolerance)", "Bone marrow transplant (for blast crisis)"],
+      "costs": { "india": "Imatinib generic ~₹3,000–8,000/month; Novartis Gleevec access programme for low-income" },
+      "resources": [
+        { "name": "NCI CML", "url": "https://www.cancer.gov/types/leukemia/hp/cml-treatment-pdq" },
+        { "name": "Max Access Programme (Novartis)", "url": "https://www.novartis.com/in-en/patient-access" }
+      ]
+    },
+    {
+      "id": "colon_cancer",
+      "letter": "C",
+      "name": "Colon Cancer",
+      "aliases": ["Colorectal Cancer (CRC)", "Bowel Cancer"],
+      "icdCode": "C18",
+      "category": "GI Cancer",
+      "description": "Cancer of the large intestine (colon). Often develops from polyps. Highly treatable when caught early. Rising incidence in younger adults worldwide.",
+      "symptoms": ["Change in bowel habits", "Blood in stool", "Abdominal pain", "Unexplained weight loss", "Fatigue", "Feeling of incomplete evacuation"],
+      "riskFactors": ["Age >50", "Inflammatory bowel disease", "Family history / Lynch syndrome / FAP", "Low-fibre diet", "Obesity", "Sedentary lifestyle", "Alcohol", "Smoking"],
+      "screening": { "methods": ["Colonoscopy (every 10 years, age 45)", "FIT test (annual)", "CT Colonography", "Stool DNA test (Cologuard)"] },
+      "treatments": ["Surgery (colectomy/hemicolectomy)", "FOLFOX/FOLFIRI chemotherapy", "Bevacizumab (anti-VEGF)", "Cetuximab/panitumumab (anti-EGFR, RAS wildtype)", "Pembrolizumab (MSI-H/dMMR)", "BRAF inhibitors (BRAF V600E)"],
+      "resources": [
+        { "name": "NCI Colon Cancer", "url": "https://www.cancer.gov/types/colorectal" },
+        { "name": "Fight Colorectal Cancer", "url": "https://fightcolorectalcancer.org" },
+        { "name": "CCFA (Crohn's & Colitis Foundation)", "url": "https://www.crohnscolitisfoundation.org" }
+      ],
+      "indiaContext": "Colorectal cancer is rising among urban Indians. Tata Memorial Centre, Mumbai has India's largest colorectal oncology unit."
+    },
+    {
+      "id": "endometrial_cancer",
+      "letter": "E",
+      "name": "Endometrial / Uterine Cancer",
+      "aliases": ["Uterine Cancer", "Cancer of the Womb", "Corpus Uteri Cancer"],
+      "icdCode": "C54",
+      "category": "Gynaecological Cancer",
+      "description": "The most common gynaecological cancer in developed countries. Arises from the lining of the uterus. Most cases present in postmenopausal women with vaginal bleeding.",
+      "symptoms": ["Postmenopausal vaginal bleeding (cardinal symptom)", "Abnormal bleeding in premenopausal women", "Pelvic pain", "Watery/blood-tinged discharge"],
+      "riskFactors": ["Obesity", "Oestrogen exposure (HRT, tamoxifen use)", "Lynch syndrome", "Diabetes", "Nulliparity", "Polycystic ovary syndrome"],
+      "treatments": ["Hysterectomy + bilateral salpingo-oophorectomy (BSO)", "Radiation", "Progestin therapy (hormone therapy)", "Carboplatin + paclitaxel chemotherapy", "Pembrolizumab + lenvatinib (advanced/recurrent)", "Dostarlimab (MSI-H/dMMR)"],
+      "resources": [
+        { "name": "NCI Endometrial Cancer", "url": "https://www.cancer.gov/types/uterine" },
+        { "name": "Foundation for Women's Cancer", "url": "https://foundationforwomenscancer.org" }
+      ]
+    },
+    {
+      "id": "esophageal_cancer",
+      "letter": "E",
+      "name": "Oesophageal Cancer",
+      "aliases": ["Esophageal Cancer", "Food Pipe Cancer"],
+      "icdCode": "C15",
+      "category": "GI Cancer",
+      "description": "Cancer of the food pipe. Two main types: Squamous Cell Carcinoma (mid-oesophagus, linked to tobacco/alcohol) and Adenocarcinoma (lower oesophagus, linked to GORD/Barrett's).",
+      "symptoms": ["Progressive dysphagia (difficulty swallowing)", "Weight loss", "Chest pain", "Regurgitation"],
+      "riskFactors": ["Smoking/tobacco", "Alcohol", "GORD (Barrett's oesophagus)", "Achalasia", "Hot beverages"],
+      "treatments": ["Surgery (oesophagectomy)", "Chemoradiation (pre-operative Crosschemoradiation)", "Nivolumab/pembrolizumab (immunotherapy)", "Tislelizumab (FDA-approved 2025)", "Trastuzumab (HER2+ cases)"],
+      "resources": [
+        { "name": "NCI Oesophageal Cancer", "url": "https://www.cancer.gov/types/esophageal" },
+        { "name": "Oesophageal Cancer Action (UK)", "url": "https://www.oca.uk.com" }
+      ],
+      "indiaContext": "High incidence in the oesophageal cancer belt (Assam, Jharkhand). SCC predominates in India due to tobacco-pan use."
+    },
+    {
+      "id": "gallbladder_cancer",
+      "letter": "G",
+      "name": "Gallbladder Cancer",
+      "icdCode": "C23",
+      "category": "GI Cancer",
+      "description": "A rare but aggressive cancer. Often diagnosed incidentally after cholecystectomy. High incidence in northern India (Ganges belt, Gangetic plains).",
+      "symptoms": ["Abdominal pain (right upper quadrant)", "Jaundice", "Nausea/vomiting", "Fever", "Palpable mass"],
+      "riskFactors": ["Gallstones", "Typhoid carriers", "Obesity", "Female gender", "South Asian ethnicity"],
+      "treatments": ["Surgery (radical cholecystectomy with liver resection)", "Gemcitabine + cisplatin chemotherapy", "Durvalumab (immunotherapy add-on)"],
+      "resources": [
+        { "name": "NCI Gallbladder Cancer", "url": "https://www.cancer.gov/types/gallbladder" }
+      ],
+      "indiaContext": "India has one of the highest global rates of gallbladder cancer. Particularly prevalent in women in Uttar Pradesh, Bihar, and Assam."
+    },
+    {
+      "id": "gastric_cancer",
+      "letter": "G",
+      "name": "Gastric Cancer (Stomach Cancer)",
+      "aliases": ["Stomach Cancer", "Gastric Adenocarcinoma"],
+      "icdCode": "C16",
+      "category": "GI Cancer",
+      "description": "Cancer of the stomach lining. Rates declining globally due to H. pylori eradication and dietary changes, but remains common in East Asia and parts of South America.",
+      "symptoms": ["Indigestion/dyspepsia", "Nausea", "Loss of appetite", "Weight loss", "Abdominal pain", "Vomiting blood (advanced)"],
+      "riskFactors": ["H. pylori infection", "Smoking", "High salt/smoked food diet", "Atrophic gastritis", "Family history", "Male gender"],
+      "treatments": ["Surgery (gastrectomy)", "FLOT/FOLFOX chemotherapy (perioperative)", "Trastuzumab (HER2+)", "Ramucirumab + paclitaxel (2nd line)", "Nivolumab (immunotherapy)", "Zolbetuximab (CLDN18.2+, new 2024)"],
+      "resources": [
+        { "name": "NCI Stomach Cancer", "url": "https://www.cancer.gov/types/stomach" },
+        { "name": "Debbie's Dream Foundation", "url": "https://debbiesaream.org" }
+      ]
+    },
+    {
+      "id": "head_neck_cancer",
+      "letter": "H",
+      "name": "Head and Neck Cancer",
+      "aliases": ["HNSCC", "Squamous Cell Carcinoma Head and Neck", "Oral Cancer", "Throat Cancer"],
+      "icdCode": "C00–C14, C30–C32",
+      "category": "Head & Neck",
+      "description": "A group of cancers arising in the oral cavity, throat, larynx, salivary glands, nasal cavity, and paranasal sinuses. Tobacco and betel nut chewing are major risk factors in India.",
+      "subtypes": ["Oral Cavity Cancer", "Oropharyngeal Cancer (HPV-related)", "Hypopharyngeal Cancer", "Laryngeal Cancer", "Nasopharyngeal Cancer", "Salivary Gland Cancer"],
+      "symptoms": ["Persistent sore throat/mouth ulcer", "Hoarseness", "Difficulty swallowing", "Lump in neck", "Earache", "Weight loss"],
+      "riskFactors": ["Tobacco (smoking/smokeless/betel nut)", "Alcohol", "HPV infection (oropharyngeal)", "EBV (nasopharyngeal)", "Sun exposure (lip)"],
+      "treatments": ["Surgery", "Radiation (IMRT)", "Cisplatin-based chemotherapy", "Cetuximab (EGFR antibody)", "Pembrolizumab (1st line for recurrent/metastatic PD-L1+, KEYNOTE-689 data 2025)"],
+      "resources": [
+        { "name": "NCI Head and Neck Cancer", "url": "https://www.cancer.gov/types/head-and-neck" },
+        { "name": "Support for People with Oral and Head/Neck Cancer (SPOHNC)", "url": "https://www.spohnc.org" }
+      ],
+      "indiaContext": "Head and neck cancers are the most common cancer group in Indian men due to tobacco and betel quid use. India has 30% of global oral cancer burden. National Tobacco Control Programme (NTCP) is active."
+    },
+    {
+      "id": "hodgkin_lymphoma",
+      "letter": "H",
+      "name": "Hodgkin Lymphoma",
+      "aliases": ["Hodgkin's Disease", "HL", "Reed-Sternberg Disease"],
+      "icdCode": "C81",
+      "category": "Lymphoma",
+      "description": "A cancer of B-lymphocytes characterised by Reed-Sternberg cells. Highly curable with modern therapy. Bimodal age distribution (young adults and >55).",
+      "symptoms": ["Painless lymph node swelling (neck, armpit)", "B symptoms: fever, night sweats, weight loss", "Pruritus", "Fatigue"],
+      "treatments": ["ABVD chemotherapy (standard)", "Brentuximab vedotin (BV) + AVD", "BEACOPP (high-risk)", "Radiation (involved site)", "Pembrolizumab/nivolumab (relapsed)"],
+      "survivalRates": { "overall": ">85% 5-year cure rate" },
+      "resources": [
+        { "name": "NCI Hodgkin Lymphoma", "url": "https://www.cancer.gov/types/lymphoma/patient/adult-hodgkin-treatment-pdq" },
+        { "name": "LLS Hodgkin", "url": "https://www.lls.org/lymphoma/hodgkin-lymphoma" }
+      ]
+    },
+    {
+      "id": "kidney_cancer",
+      "letter": "K",
+      "name": "Kidney Cancer (Renal Cell Carcinoma)",
+      "aliases": ["RCC", "Renal Cell Carcinoma", "Hypernephroma"],
+      "icdCode": "C64",
+      "category": "Urological Cancer",
+      "description": "Arises in the lining of the renal tubules. Clear cell RCC is the most common subtype. Strongly linked to smoking and obesity.",
+      "symptoms": ["Blood in urine", "Flank pain", "Palpable mass", "Classic triad rare. Often found incidentally on imaging"],
+      "riskFactors": ["Smoking", "Obesity", "Hypertension", "VHL gene mutation", "Dialysis (chronic kidney disease)"],
+      "treatments": ["Surgery (partial/radical nephrectomy)", "VEGF inhibitors (sunitinib, pazopanib, axitinib)", "mTOR inhibitors (everolimus)", "Immunotherapy (nivolumab + ipilimumab combination)", "Pembrolizumab + lenvatinib", "Belzutifan (HIF-2α inhibitor for VHL disease)"],
+      "resources": [
+        { "name": "NCI Kidney Cancer", "url": "https://www.cancer.gov/types/kidney" },
+        { "name": "Kidney Cancer Association", "url": "https://www.kidneycancer.org" }
+      ]
+    },
+    {
+      "id": "laryngeal_cancer",
+      "letter": "L",
+      "name": "Laryngeal Cancer",
+      "aliases": ["Voice Box Cancer", "Larynx Cancer"],
+      "icdCode": "C32",
+      "category": "Head & Neck",
+      "description": "Cancer of the voice box. Strongly linked to tobacco and alcohol. Hoarseness is an early and important warning sign.",
+      "symptoms": ["Hoarseness", "Sore throat", "Difficulty swallowing", "Ear pain", "Lump in neck", "Breathing difficulty (late)"],
+      "treatments": ["Radiation (organ preservation for early stage)", "Surgery (laryngectomy if needed)", "Chemoradiation (cisplatin-based)", "Cetuximab"],
+      "resources": [
+        { "name": "NCI Laryngeal Cancer", "url": "https://www.cancer.gov/types/head-and-neck/patient/laryngeal-treatment-pdq" }
+      ]
+    },
+    {
+      "id": "liver_cancer",
+      "letter": "L",
+      "name": "Liver Cancer (Hepatocellular Carcinoma)",
+      "aliases": ["HCC", "Hepatoma"],
+      "icdCode": "C22.0",
+      "category": "GI Cancer",
+      "description": "The most common primary liver cancer. Strongly associated with Hepatitis B and C, cirrhosis, and NAFLD. Often diagnosed at advanced stage.",
+      "symptoms": ["Weight loss", "Jaundice", "Abdominal pain/swelling", "Nausea", "Fatigue", "Hepatomegaly"],
+      "riskFactors": ["Hepatitis B/C infection", "Cirrhosis (any cause)", "Alcohol", "NAFLD/NASH", "Aflatoxin exposure"],
+      "treatments": ["Surgery (resection/hepatectomy)", "Liver transplant (Milan criteria)", "Ablation (RFA, MWA)", "TACE (Trans-arterial chemoembolisation)", "SIRT (Y-90 radioembolisation)", "Sorafenib/lenvatinib (first line)", "Atezolizumab + bevacizumab (first line)", "Tremelimumab + durvalumab"],
+      "resources": [
+        { "name": "NCI Liver Cancer", "url": "https://www.cancer.gov/types/liver" },
+        { "name": "Hepatitis B Foundation", "url": "https://www.hepb.org" }
+      ],
+      "indiaContext": "Hepatitis B-driven HCC is common in India. Tata Memorial Centre and ILBS Delhi are leading centres. Universal HBV vaccination is part of India's National Immunisation Programme."
+    },
+    {
+      "id": "lung_cancer",
+      "letter": "L",
+      "name": "Lung Cancer",
+      "aliases": ["NSCLC", "SCLC", "Non-Small Cell Lung Cancer", "Small Cell Lung Cancer"],
+      "icdCode": "C34",
+      "category": "Thoracic Cancer",
+      "description": "The leading cause of cancer deaths worldwide. Two main types: Non-Small Cell (85%) and Small Cell (15%). Smoking is the main cause, but 15–25% of cases occur in never-smokers (often EGFR/ALK driven).",
+      "subtypes": [
+        { "name": "NSCLC — Adenocarcinoma", "note": "Most common, often non-smokers; test for EGFR, ALK, ROS1, BRAF, MET, KRAS" },
+        { "name": "NSCLC — Squamous Cell", "note": "More common in smokers" },
+        { "name": "NSCLC — Large Cell", "note": "Less common" },
+        { "name": "Small Cell Lung Cancer (SCLC)", "note": "Aggressive; strongly linked to smoking; often widespread at diagnosis" }
+      ],
+      "symptoms": ["Persistent cough", "Blood in sputum (haemoptysis)", "Dyspnoea", "Chest pain", "Weight loss", "Hoarseness", "Bone pain (metastatic)"],
+      "riskFactors": ["Smoking (80%)", "Second-hand smoke", "Radon gas", "Asbestos", "Air pollution", "Occupational carcinogens"],
+      "screening": { "method": "Low-dose CT (LDCT)", "recommendation": "Annual for ages 50–80 with >20 pack-year history (US USPSTF 2021)" },
+      "treatments": [
+        "Surgery (lobectomy, VATS)",
+        "Radiation (SBRT, conventionally fractionated)",
+        "Platinum-based chemotherapy (cisplatin/carboplatin)",
+        "EGFR inhibitors: osimertinib (1st/3rd gen), gefitinib, erlotinib",
+        "ALK inhibitors: alectinib, lorlatinib, crizotinib",
+        "ROS1/BRAF/MET/RET/KRAS G12C inhibitors",
+        "Pembrolizumab / nivolumab / atezolizumab (PD-1/PD-L1 immunotherapy)",
+        "Chemo + immunotherapy combinations",
+        "Ivonescimab (HARMONi-2 trial data 2025 — outperformed pembrolizumab for PD-L1+ NSCLC)"
+      ],
+      "costs": { "india": "EGFR TKIs (osimertinib generic): ₹30,000–80,000/month", "usa": "Osimertinib (Tagrisso): ~$18,000/month" },
+      "resources": [
+        { "name": "NCI Lung Cancer", "url": "https://www.cancer.gov/types/lung" },
+        { "name": "LUNGevity Foundation", "url": "https://lungevity.org" },
+        { "name": "Free to Breathe", "url": "https://www.freetobreathe.org" },
+        { "name": "IASLC (International Association for Study of Lung Cancer)", "url": "https://www.iaslc.org" }
+      ],
+      "indiaContext": "Lung cancer is the most common cancer in Indian men. AIIMS Delhi has India's largest lung cancer molecular testing programme. NTCP (National Tobacco Control Programme) is the primary prevention initiative."
+    },
+    {
+      "id": "melanoma",
+      "letter": "M",
+      "name": "Melanoma",
+      "aliases": ["Cutaneous Melanoma", "Skin Melanoma", "Ocular Melanoma"],
+      "icdCode": "C43",
+      "category": "Skin Cancer",
+      "description": "The most dangerous form of skin cancer, arising from melanocytes. Linked to UV exposure and sunburn, especially in fair-skinned populations. BRAF mutation present in ~50% of cases.",
+      "symptoms": ["Change in existing mole (ABCDE rule)", "New unusual skin lesion", "Lesion that bleeds or doesn't heal"],
+      "ABCDERule": { "A": "Asymmetry", "B": "Border (irregular)", "C": "Colour (multiple shades)", "D": "Diameter (>6mm)", "E": "Evolving" },
+      "riskFactors": ["Fair skin", "Sunburn history", "UV/tanning bed exposure", "Family history", "Many moles", "BRAF V600E mutation"],
+      "treatments": ["Surgery (wide local excision, sentinel node biopsy)", "BRAF + MEK inhibitor combo (dabrafenib + trametinib)", "Immunotherapy (ipilimumab, nivolumab, pembrolizumab)", "Combined ipilimumab + nivolumab (high response rate)", "Lifileucel (TIL cell therapy, FDA-approved 2024)", "Radiation"],
+      "resources": [
+        { "name": "NCI Melanoma", "url": "https://www.cancer.gov/types/skin/patient/melanoma-treatment-pdq" },
+        { "name": "Melanoma Research Alliance", "url": "https://www.melanomaresearchalliance.org" },
+        { "name": "AIM at Melanoma", "url": "https://www.aimatmelanoma.org" }
+      ]
+    },
+    {
+      "id": "mesothelioma",
+      "letter": "M",
+      "name": "Mesothelioma",
+      "aliases": ["Malignant Pleural Mesothelioma", "MPM"],
+      "icdCode": "C45",
+      "category": "Thoracic Cancer",
+      "description": "A rare but aggressive cancer of the mesothelium lining (pleura, peritoneum, pericardium). Almost exclusively caused by asbestos exposure.",
+      "symptoms": ["Dyspnoea (pleural effusion)", "Chest pain", "Persistent cough", "Abdominal swelling (peritoneal type)"],
+      "riskFactors": ["Asbestos exposure (primary cause; latency 20–50 years)", "Radiation"],
+      "treatments": ["Chemotherapy (cisplatin + pemetrexed)", "Immunotherapy (nivolumab + ipilimumab)", "Surgery (pleurectomy/decortication)", "Radiation"],
+      "resources": [
+        { "name": "NCI Mesothelioma", "url": "https://www.cancer.gov/types/mesothelioma" },
+        { "name": "Mesothelioma Applied Research Foundation", "url": "https://www.curemeso.org" }
+      ]
+    },
+    {
+      "id": "multiple_myeloma",
+      "letter": "M",
+      "name": "Multiple Myeloma",
+      "aliases": ["Myeloma", "Plasma Cell Myeloma"],
+      "icdCode": "C90.0",
+      "category": "Blood Cancer",
+      "description": "Cancer of plasma cells in the bone marrow. Characterised by M-protein in blood/urine. Not curable but highly manageable with modern therapy.",
+      "symptoms": ["Bone pain (especially back/ribs)", "Fatigue/anaemia", "Recurrent infections", "Kidney dysfunction", "Hypercalcaemia", "CRAB criteria"],
+      "treatments": ["VRd (bortezomib + lenalidomide + dexamethasone)", "Daratumumab-based regimens (Dara-VRd)", "Autologous stem cell transplant (ASCT)", "Carfilzomib, pomalidomide", "BCMA-targeted: belantamab, teclistamab (bispecific)", "BCMA CAR-T (idecabtagene vicleucel, ciltacabtagene autoleucel)"],
+      "resources": [
+        { "name": "NCI Multiple Myeloma", "url": "https://www.cancer.gov/types/myeloma" },
+        { "name": "International Myeloma Foundation", "url": "https://www.myeloma.org" },
+        { "name": "Multiple Myeloma Research Foundation", "url": "https://www.themmrf.org" }
+      ]
+    },
+    {
+      "id": "non_hodgkin_lymphoma",
+      "letter": "N",
+      "name": "Non-Hodgkin Lymphoma (NHL)",
+      "aliases": ["NHL", "B-cell Lymphoma", "T-cell Lymphoma"],
+      "icdCode": "C82–C85",
+      "category": "Lymphoma",
+      "description": "A diverse group of lymphoid cancers. Includes >60 subtypes — indolent (slow) and aggressive. DLBCL is the most common aggressive subtype; Follicular lymphoma is the most common indolent.",
+      "subtypes": [
+        { "name": "DLBCL (Diffuse Large B-Cell)", "type": "Aggressive", "treatment": "R-CHOP chemo" },
+        { "name": "Follicular Lymphoma (FL)", "type": "Indolent", "treatment": "Watch-and-wait or R-CHOP/obinutuzumab" },
+        { "name": "Mantle Cell Lymphoma (MCL)", "type": "Aggressive/Indolent", "treatment": "BTK inhibitors, hyper-CVAD" },
+        { "name": "Burkitt Lymphoma", "type": "Very aggressive", "note": "Most common paediatric lymphoma in sub-Saharan Africa" },
+        { "name": "T-Cell Lymphoma (PTCL)", "type": "Aggressive", "treatment": "CHOP-based" }
+      ],
+      "treatments": ["R-CHOP (rituximab + CHOP)", "Bendamustine + rituximab", "BTK inhibitors (ibrutinib, zanubrutinib)", "PI3K inhibitors", "Polatuzumab vedotin", "CAR-T (axicabtagene, lisocabtagene, brexucabtagene)", "Bispecific (epcoritamab, glofitamab)", "ASCT/Allogenic transplant"],
+      "resources": [
+        { "name": "NCI NHL", "url": "https://www.cancer.gov/types/lymphoma/patient/adult-nhl-treatment-pdq" },
+        { "name": "LLS Non-Hodgkin", "url": "https://www.lls.org/lymphoma/non-hodgkin-lymphoma" },
+        { "name": "Lymphoma Research Foundation", "url": "https://lymphoma.org" }
+      ]
+    },
+    {
+      "id": "oral_cancer",
+      "letter": "O",
+      "name": "Oral Cancer",
+      "aliases": ["Mouth Cancer", "Buccal Mucosa Cancer", "Tongue Cancer"],
+      "icdCode": "C02–C06",
+      "category": "Head & Neck",
+      "description": "Cancers of the lips, tongue, gums, hard palate, buccal mucosa. India has among the highest oral cancer rates globally due to tobacco and betel nut (areca) use.",
+      "symptoms": ["Non-healing ulcer in mouth", "Leukoplakia/erythroplakia", "Pain on swallowing", "Difficulty opening mouth (trismus)", "Lump in mouth"],
+      "riskFactors": ["Tobacco chewing/smoking", "Betel nut/pan masala", "Alcohol", "HPV"],
+      "treatments": ["Surgery (wide excision, mandibulectomy)", "Radiation (IMRT)", "Cisplatin-based chemoradiation", "Cetuximab", "Pembrolizumab (recurrent/metastatic)"],
+      "resources": [
+        { "name": "NCI Oral Cancer", "url": "https://www.cancer.gov/types/head-and-neck/patient/oral-prevention-pdq" },
+        { "name": "Oral Cancer Foundation", "url": "https://oralcancerfoundation.org" }
+      ],
+      "indiaContext": "India has ~200,000 new oral cancer cases per year — one of the world's highest. ICS and CPAA conduct regular oral cancer screening camps. WHO has designated India for targeted tobacco control interventions."
+    },
+    {
+      "id": "ovarian_cancer",
+      "letter": "O",
+      "name": "Ovarian Cancer",
+      "aliases": ["Ovarian Carcinoma", "Fallopian Tube Cancer", "Primary Peritoneal Cancer"],
+      "icdCode": "C56",
+      "category": "Gynaecological Cancer",
+      "description": "Often called the 'silent killer' because symptoms are vague and diagnosis typically comes at advanced stage. BRCA1/2 mutations significantly increase risk.",
+      "symptoms": ["Abdominal bloating/distension", "Pelvic pain", "Changes in bowel/bladder habits", "Feeling full quickly", "Fatigue"],
+      "riskFactors": ["BRCA1/2 mutation", "Lynch syndrome", "Nulliparity", "Endometriosis", "Family history", "HRT (oestrogen only)"],
+      "treatments": ["Debulking surgery (cytoreductive)", "Carboplatin + paclitaxel chemotherapy", "Bevacizumab", "PARP inhibitors (olaparib, niraparib, rucaparib — maintenance)", "Mirvetuximab soravtansine (folate receptor positive)", "Avutometinib + defactinib (low-grade serous, FDA 2025)"],
+      "resources": [
+        { "name": "NCI Ovarian Cancer", "url": "https://www.cancer.gov/types/ovarian" },
+        { "name": "Ovarian Cancer Research Alliance", "url": "https://ocrahope.org" },
+        { "name": "Target Ovarian Cancer (UK)", "url": "https://targetovariancancer.org.uk" }
+      ]
+    },
+    {
+      "id": "pancreatic_cancer",
+      "letter": "P",
+      "name": "Pancreatic Cancer",
+      "aliases": ["Pancreatic Adenocarcinoma", "PDAC", "Pancreatic Ductal Adenocarcinoma"],
+      "icdCode": "C25",
+      "category": "GI Cancer",
+      "description": "One of the deadliest cancers due to late diagnosis and limited treatment options. 5-year survival only ~13%. Often diagnosed when metastatic.",
+      "symptoms": ["Jaundice (painless, yellow skin/eyes)", "Upper abdominal/back pain", "Weight loss", "New-onset diabetes", "Light-coloured stools", "Nausea"],
+      "riskFactors": ["Smoking", "Chronic pancreatitis", "Diabetes (new onset)", "Obesity", "BRCA1/2/PALB2 mutations", "Lynch syndrome"],
+      "treatments": ["Surgery (Whipple procedure / pancreaticoduodenectomy)", "FOLFIRINOX chemotherapy", "Gemcitabine + nab-paclitaxel", "Erlotinib (for EGFR)", "PARP inhibitors (BRCA mutated maintenance)", "KRAS G12C inhibitors (emerging)", "Immunotherapy (limited benefit except MSI-H)"],
+      "resources": [
+        { "name": "NCI Pancreatic Cancer", "url": "https://www.cancer.gov/types/pancreatic" },
+        { "name": "Pancreatic Cancer Action Network (PanCAN)", "url": "https://www.pancan.org" },
+        { "name": "Hirshberg Foundation", "url": "https://pancreatic.org" }
+      ]
+    },
+    {
+      "id": "prostate_cancer",
+      "letter": "P",
+      "name": "Prostate Cancer",
+      "aliases": ["CaP", "Prostatic Adenocarcinoma"],
+      "icdCode": "C61",
+      "category": "Urological Cancer",
+      "description": "The most common cancer in men (excluding skin cancer). Ranges from very slow-growing (often managed with active surveillance) to aggressive metastatic forms.",
+      "symptoms": ["Urinary frequency/urgency", "Weak urine stream", "Blood in urine/semen", "Pelvic/back pain (advanced)", "Often asymptomatic in early stages"],
+      "riskFactors": ["Age >50", "African-American ancestry", "Family history (BRCA2, HOXB13)", "Western diet"],
+      "screening": { "method": "PSA blood test + digital rectal exam (DRE)", "recommendation": "Shared decision-making at age 50–55 (USPSTF); earlier for high-risk groups" },
+      "treatments": ["Active surveillance (low-risk)", "Radical prostatectomy (robotic/open)", "Radiation (EBRT, brachytherapy)", "Hormone therapy (ADT: LHRH agonists/antagonists)", "Enzalutamide, apalutamide, darolutamide (next-gen anti-androgens)", "Docetaxel/cabazitaxel (chemotherapy)", "Lu-PSMA-617 (lutetium PSMA radioligand therapy, FDA 2022)", "PARP inhibitors (BRCA/HRR)", "Sipuleucel-T (prostate cancer vaccine)"],
+      "costs": { "india": "Enzalutamide: ₹20,000–80,000/month; generic available", "usa": "Enzalutamide (Xtandi): ~$10,000/month" },
+      "resources": [
+        { "name": "NCI Prostate Cancer", "url": "https://www.cancer.gov/types/prostate" },
+        { "name": "Prostate Cancer Foundation", "url": "https://www.pcf.org" },
+        { "name": "ZERO — The End of Prostate Cancer", "url": "https://zerocancer.org" }
+      ]
+    },
+    {
+      "id": "rectal_cancer",
+      "letter": "R",
+      "name": "Rectal Cancer",
+      "aliases": ["Cancer of the Rectum", "Colorectal Cancer (Rectal)"],
+      "icdCode": "C20",
+      "category": "GI Cancer",
+      "description": "Cancer of the last 12 cm of the large intestine. Treatment differs from colon cancer. Pembrolizumab for MSI-H rectal cancer showed complete response in 100% of a landmark 2022 trial (nonoperative management).",
+      "symptoms": ["Rectal bleeding", "Change in bowel habits", "Tenesmus (feeling of incomplete evacuation)", "Pelvic pain"],
+      "treatments": ["TME (Total Mesorectal Excision) surgery", "Neoadjuvant chemoradiation (5-FU + radiation)", "FOLFOX/FOLFIRI", "Pembrolizumab (MSI-H/dMMR — complete response without surgery in select patients)", "VEGF/EGFR inhibitors (metastatic)"],
+      "resources": [
+        { "name": "NCI Rectal Cancer", "url": "https://www.cancer.gov/types/rectal" },
+        { "name": "ASCO Nonoperative Management Cercek et al 2022", "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2201445" }
+      ]
+    },
+    {
+      "id": "sarcoma",
+      "letter": "S",
+      "name": "Sarcoma",
+      "aliases": ["Soft Tissue Sarcoma", "STS", "Bone Sarcoma"],
+      "icdCode": "C49",
+      "category": "Sarcoma",
+      "description": "A rare, diverse group of cancers arising from connective tissues (muscle, fat, bone, cartilage, nerves). Over 70 subtypes.",
+      "subtypes": ["Leiomyosarcoma (LMS)", "Liposarcoma", "Synovial Sarcoma", "Undifferentiated Pleomorphic Sarcoma (UPS)", "Gastrointestinal Stromal Tumour (GIST)", "Rhabdomyosarcoma (paediatric)", "Angiosarcoma"],
+      "treatments": ["Surgery (primary treatment — wide resection)", "Radiation", "Doxorubicin + ifosfamide chemotherapy", "Imatinib (GIST)", "Trabectedin (liposarcoma/LMS)", "Pazopanib (advanced STS)", "Gene therapy (ADP-A2M4CD8 — synovial sarcoma, FDA 2024)"],
+      "resources": [
+        { "name": "NCI Soft Tissue Sarcoma", "url": "https://www.cancer.gov/types/soft-tissue-sarcoma" },
+        { "name": "Sarcoma Foundation of America", "url": "https://www.curesarcoma.org" },
+        { "name": "ESUN Sarcoma Alliance", "url": "https://sarcomaalliance.org" }
+      ]
+    },
+    {
+      "id": "skin_cancer_nonmelanoma",
+      "letter": "S",
+      "name": "Skin Cancer (Non-Melanoma)",
+      "aliases": ["BCC", "SCC", "Basal Cell Carcinoma", "Squamous Cell Carcinoma of Skin"],
+      "icdCode": "C44",
+      "category": "Skin Cancer",
+      "description": "The most common cancers overall. Basal Cell Carcinoma (BCC) is most frequent and rarely metastasises. Squamous Cell Carcinoma (SCC) has higher metastatic potential.",
+      "symptoms": ["New or changing skin lesion", "Pearly or waxy bump (BCC)", "Flat lesion/scaly patch", "Lesion that doesn't heal"],
+      "riskFactors": ["Sun/UV exposure", "Fair skin", "Tanning beds", "Immunosuppression", "HPV (cutaneous SCC)", "Radiation history"],
+      "treatments": ["Mohs micrographic surgery (gold standard for BCC/SCC)", "Excision", "Radiation", "Topical therapies (5-FU, imiquimod)", "Vismodegib/sonidegib (advanced BCC — hedgehog pathway)", "Cemiplimab (advanced SCC)", "Cosibelimab (SCC, FDA 2024)"],
+      "resources": [
+        { "name": "NCI Skin Cancer", "url": "https://www.cancer.gov/types/skin" },
+        { "name": "Skin Cancer Foundation", "url": "https://www.skincancer.org" }
+      ]
+    },
+    {
+      "id": "testicular_cancer",
+      "letter": "T",
+      "name": "Testicular Cancer",
+      "aliases": ["Germ Cell Tumour", "Seminoma", "Non-Seminoma"],
+      "icdCode": "C62",
+      "category": "Urological Cancer",
+      "description": "The most common cancer in men aged 15–35. Highly curable even at advanced stages. Regular self-examination is key.",
+      "symptoms": ["Painless testicular lump or swelling", "Scrotal heaviness", "Back pain (if retroperitoneal spread)"],
+      "subtypes": [
+        { "name": "Seminoma", "note": "Pure germ cell; most common; exquisitely radiosensitive" },
+        { "name": "Non-seminoma (NSGCT)", "note": "Includes embryonal carcinoma, teratoma, choriocarcinoma, yolk sac" }
+      ],
+      "treatments": ["Orchidectomy (radical inguinal)", "BEP chemotherapy (bleomycin, etoposide, cisplatin)", "Radiation (seminoma)", "RPLND (retroperitoneal lymph node dissection)"],
+      "survivalRates": { "stage1": ">99% 5-year", "metastatic": "~73–80% 5-year" },
+      "resources": [
+        { "name": "NCI Testicular Cancer", "url": "https://www.cancer.gov/types/testicular" },
+        { "name": "Testicular Cancer Society", "url": "https://www.testicularcancersociety.org" }
+      ]
+    },
+    {
+      "id": "thyroid_cancer",
+      "letter": "T",
+      "name": "Thyroid Cancer",
+      "aliases": ["Papillary Thyroid Carcinoma", "PTC", "Follicular Thyroid Carcinoma", "Anaplastic Thyroid Cancer"],
+      "icdCode": "C73",
+      "category": "Endocrine Cancer",
+      "description": "The most common endocrine cancer. Papillary type (80%) has excellent prognosis. Anaplastic type is extremely aggressive.",
+      "subtypes": ["Papillary (80%)", "Follicular (10%)", "Medullary (3–5%)", "Anaplastic (1–2%)"],
+      "symptoms": ["Painless thyroid nodule/lump in neck", "Difficulty swallowing", "Hoarseness", "Swollen lymph nodes"],
+      "treatments": ["Surgery (thyroidectomy)", "Radioactive Iodine (RAI/I-131)", "TSH suppression (levothyroxine)", "Targeted therapy (sorafenib/lenvatinib for RAI-refractory)", "BRAF inhibitors (dabrafenib for BRAF V600E)", "Pembrolizumab (anaplastic)", "Selpercatinib (RET-mutant)"],
+      "resources": [
+        { "name": "NCI Thyroid Cancer", "url": "https://www.cancer.gov/types/thyroid" },
+        { "name": "ThyCa (Thyroid Cancer Survivors' Association)", "url": "https://www.thyca.org" }
+      ]
+    },
+    {
+      "id": "uterine_cancer",
+      "letter": "U",
+      "name": "Uterine/Endometrial Cancer",
+      "note": "See Endometrial Cancer entry under E for full details.",
+      "url": "endometrial_cancer"
+    },
+    {
+      "id": "vaginal_cancer",
+      "letter": "V",
+      "name": "Vaginal Cancer",
+      "icdCode": "C52",
+      "category": "Gynaecological Cancer",
+      "description": "A rare cancer of the vagina. Most commonly squamous cell. Often related to HPV.",
+      "treatments": ["Radiation (primary)", "Chemoradiation (cisplatin)", "Surgery (vaginectomy for early stage)"],
+      "resources": [
+        { "name": "NCI Vaginal Cancer", "url": "https://www.cancer.gov/types/vaginal" }
+      ]
+    },
+    {
+      "id": "vulvar_cancer",
+      "letter": "V",
+      "name": "Vulvar Cancer",
+      "icdCode": "C51",
+      "category": "Gynaecological Cancer",
+      "description": "Cancer of the outer female genitalia. Often SCC. May present as non-healing sore.",
+      "treatments": ["Surgery (wide local excision, radical vulvectomy)", "Radiation", "Cisplatin chemoradiation"],
+      "resources": [
+        { "name": "NCI Vulvar Cancer", "url": "https://www.cancer.gov/types/vulvar" }
+      ]
+    },
+    {
+      "id": "waldenstrom_macroglobulinaemia",
+      "letter": "W",
+      "name": "Waldenström Macroglobulinaemia (WM)",
+      "aliases": ["Lymphoplasmacytic Lymphoma", "LPL"],
+      "icdCode": "C88.0",
+      "category": "Blood Cancer",
+      "description": "A rare, slow-growing B-cell lymphoma producing IgM paraprotein. MYD88 mutation is present in >90% of cases.",
+      "symptoms": ["Fatigue", "Weight loss", "Peripheral neuropathy", "Hyperviscosity syndrome (vision/neurological changes)", "Enlarged lymph nodes/spleen"],
+      "treatments": ["BTK inhibitors (ibrutinib, zanubrutinib)", "Chemoimmunotherapy (DRC, BR)", "Plasmapheresis for hyperviscosity"],
+      "resources": [
+        { "name": "NCI WM", "url": "https://www.cancer.gov/types/lymphoma/hp/waldenstrom-treatment-pdq" },
+        { "name": "IWMF (International Waldenström's MF Foundation)", "url": "https://www.iwmf.com" }
+      ]
+    },
+    {
+      "id": "wilms_tumour",
+      "letter": "W",
+      "name": "Wilms Tumour (Nephroblastoma)",
+      "aliases": ["Nephroblastoma"],
+      "icdCode": "C64",
+      "category": "Paediatric Cancer",
+      "description": "The most common kidney cancer in children, typically occurring at ages 3–4. Highly curable with modern therapy.",
+      "treatments": ["Surgery (nephrectomy)", "Chemotherapy (actinomycin D + vincristine, or with doxorubicin)", "Radiation (high-risk)"],
+      "survivalRates": { "overall": ">90% 5-year cure rate" },
+      "resources": [
+        { "name": "NCI Wilms Tumour", "url": "https://www.cancer.gov/types/kidney/patient/wilms-treatment-pdq" },
+        { "name": "St. Jude Wilms Tumour", "url": "https://www.stjude.org/disease/wilms-tumor.html" }
+      ]
+    },
+    {
+      "id": "unknown_primary",
+      "letter": "#",
+      "name": "Cancer of Unknown Primary (CUP)",
+      "aliases": ["CUP", "Occult Primary Cancer"],
+      "icdCode": "C80",
+      "category": "Other",
+      "description": "Metastatic cancer where the primary site cannot be identified despite thorough investigation. Represents 3–5% of all cancers.",
+      "diagnosis": "Molecular profiling (NGS) can identify likely primary site in ~70% of cases.",
+      "treatments": ["Empirical platinum-based chemotherapy", "Molecular profiling to identify treatable target mutations", "Site-directed therapy based on NGS", "Immunotherapy (MSI-H cases)"],
+      "resources": [
+        { "name": "NCI CUP", "url": "https://www.cancer.gov/types/unknown-primary" }
+      ]
+    }
+  ],
+
+  "supportResources": {
+    "emotional": [
+      {
+        "name": "Cancer Support Community",
+        "url": "https://www.cancersupportcommunity.org",
+        "helpline": "1-888-793-9355",
+        "description": "Free support groups, counselling, and educational workshops for cancer patients and families.",
+        "geography": "US / Global online"
+      },
+      {
+        "name": "LIVESTRONG Foundation",
+        "url": "https://www.livestrong.org",
+        "description": "Practical support, navigation assistance, and survivorship resources.",
+        "geography": "US / Global"
+      },
+      {
+        "name": "Cancer Care (US)",
+        "url": "https://www.cancercare.org",
+        "helpline": "1-800-813-4673",
+        "description": "Free professional social work services, support groups, educational workshops, and financial assistance.",
+        "geography": "US"
+      },
+      {
+        "name": "iCall India (Mental Health)",
+        "url": "https://icallhelpline.org",
+        "helpline": "9152987821",
+        "description": "Counselling services for mental health including cancer distress. India-based.",
+        "geography": "India"
+      },
+      {
+        "name": "iCanCer Help India",
+        "url": "https://www.icancerhelp.in",
+        "description": "Cancer guidance, support, and resource navigation for Indian patients.",
+        "geography": "India"
+      }
+    ],
+    "financial": [
+      {
+        "name": "Patient Access Network (PAN) Foundation",
+        "url": "https://www.panfoundation.org",
+        "description": "Financial assistance for out-of-pocket drug costs for underinsured US patients.",
+        "geography": "US"
+      },
+      {
+        "name": "HealthWell Foundation",
+        "url": "https://www.healthwellfoundation.org",
+        "description": "Copay and premium assistance for specific cancer drugs.",
+        "geography": "US"
+      },
+      {
+        "name": "CancerAssist India",
+        "url": "https://www.cancerassist.in",
+        "description": "Comprehensive directory of Indian NGOs providing financial aid for cancer treatment.",
+        "geography": "India"
+      },
+      {
+        "name": "Ketto (Crowdfunding)",
+        "url": "https://www.ketto.org",
+        "description": "India's largest medical crowdfunding platform.",
+        "geography": "India"
+      },
+      {
+        "name": "ImpactGuru",
+        "url": "https://www.impactguru.com",
+        "description": "Medical crowdfunding for cancer treatment in India.",
+        "geography": "India"
+      }
+    ],
+    "palliative": [
+      {
+        "name": "CanSupport (India)",
+        "url": "https://cansupport.org",
+        "helpline": "+91-11-4101-0539",
+        "description": "Free home-based palliative care for cancer patients. Delhi-NCR and 6 states.",
+        "geography": "India"
+      },
+      {
+        "name": "Pallium India",
+        "url": "https://palliumindia.org",
+        "description": "Palliative care education, advocacy, and services across India. Particularly strong in Kerala.",
+        "geography": "India"
+      },
+      {
+        "name": "National Hospice and Palliative Care Organization (NHPCO)",
+        "url": "https://www.nhpco.org",
+        "description": "Find hospice services anywhere in the US.",
+        "geography": "US"
+      },
+      {
+        "name": "Marie Curie (UK)",
+        "url": "https://www.mariecurie.org.uk",
+        "helpline": "0800-090-2309",
+        "geography": "UK"
+      }
+    ],
+    "survivorship": [
+      {
+        "name": "Journey Forward (Survivorship Care Plans)",
+        "url": "https://journeyforward.org",
+        "description": "Personalised survivorship care plan builder.",
+        "geography": "Global"
+      },
+      {
+        "name": "LIVESTRONG at the YMCA",
+        "url": "https://www.livestrong.org/we-can-help/livestrong-at-the-ymca",
+        "description": "Physical activity programme for cancer survivors.",
+        "geography": "US"
+      },
+      {
+        "name": "YouWeCan Foundation India",
+        "url": "https://yuvrajsingh.org/youwecan",
+        "description": "Cancer survivor support and awareness in India.",
+        "geography": "India"
+      }
+    ],
+    "nutrition": [
+      {
+        "name": "ASCO Nutrition & Cancer",
+        "url": "https://www.cancer.net/survivorship/healthy-living/nutrition",
+        "description": "Evidence-based nutrition guidance for cancer patients."
+      },
+      {
+        "name": "Cuddles Foundation (Paediatric India)",
+        "url": "https://www.cuddlesfoundation.org",
+        "description": "Nutritional support for children with cancer across 30+ Indian hospitals."
+      }
+    ]
+  },
+
+  "clinicalTrialResources": [
+    {
+      "name": "ClinicalTrials.gov",
+      "url": "https://clinicaltrials.gov",
+      "description": "US NIH database of clinical trials worldwide. Search by cancer type, location, and eligibility.",
+      "usage": "Search 'cancer type + city' to find local trials"
+    },
+    {
+      "name": "CTRI India (Clinical Trials Registry of India)",
+      "url": "https://ctri.nic.in",
+      "description": "Official registry of clinical trials conducted in India (ICMR-mandated)."
+    },
+    {
+      "name": "EU Clinical Trials Register",
+      "url": "https://www.clinicaltrialsregister.eu",
+      "description": "European clinical trial data."
+    },
+    {
+      "name": "WHO ICTRP (International Clinical Trials Registry Platform)",
+      "url": "https://www.who.int/clinical-trials-registry-platform",
+      "description": "WHO's portal linking all national trial registries globally."
+    }
+  ],
+
+  "diagnosticsResources": [
+    {
+      "name": "ASCO Tumour Biomarker Testing Guideline",
+      "url": "https://www.asco.org/practice-patients/guidelines/cancer-genetics-prevention-risk-reduction-and-other",
+      "description": "Guidelines on which molecular tests are recommended for which cancers."
+    },
+    {
+      "name": "Foundation Medicine FoundationOne CDx (NGS)",
+      "url": "https://www.foundationmedicine.com/genomic-testing/foundationone-cdx",
+      "description": "Comprehensive 324-gene tumour profiling. Available in India through select labs."
+    },
+    {
+      "name": "Guardant360 (Liquid Biopsy)",
+      "url": "https://guardanthealth.com/solutions/guardant360",
+      "description": "Blood-based comprehensive genomic profiling. Available globally."
+    },
+    {
+      "name": "Strand Life Sciences (India — NGS)",
+      "url": "https://www.strandls.com",
+      "description": "Comprehensive cancer genomic profiling available in India. BRCA, NGS, tumour profiling."
+    },
+    {
+      "name": "4baseCare (India — Genomics)",
+      "url": "https://4basecare.com",
+      "description": "Indian precision oncology lab. NGS-based cancer profiling and clinical decision support."
+    }
+  ],
+
+  "booksPdfsReference": [
+    {
+      "title": "DeVita, Hellman, and Rosenberg's Cancer: Principles & Practice of Oncology",
+      "edition": "12th Edition (2023)",
+      "url": "https://www.wolterskluwer.com/en/solutions/ovid/devita-hellman-and-rosenbergs-cancer-principles-and-practice-of-oncology-906",
+      "description": "The definitive medical oncology textbook. Used by oncologists worldwide."
+    },
+    {
+      "title": "NCI PDQ Cancer Information Summaries",
+      "url": "https://www.cancer.gov/publications/pdq",
+      "description": "Free comprehensive cancer information summaries for patients and health professionals. Updated regularly.",
+      "format": "Online (free)"
+    },
+    {
+      "title": "ASCO Cancer.Net Patient Library",
+      "url": "https://www.cancer.net/cancer-types",
+      "description": "Doctor-approved patient information from the American Society of Clinical Oncology.",
+      "format": "Online (free)"
+    },
+    {
+      "title": "Cancer Facts & Figures 2025 (ACS)",
+      "url": "https://www.cancer.org/content/dam/cancer-org/research/cancer-facts-and-statistics/annual-cancer-facts-and-figures/2025/2025-cancer-facts-and-figures-acs.pdf",
+      "description": "Annual statistics on US cancer incidence, mortality, and trends.",
+      "format": "PDF (free)"
+    },
+    {
+      "title": "GLOBOCAN 2022 (IARC)",
+      "url": "https://gco.iarc.fr/en/resources/globocan",
+      "description": "Global cancer incidence and mortality statistics from the International Agency for Research on Cancer.",
+      "format": "Online interactive (free)"
+    },
+    {
+      "title": "Indian Cancer Statistics (NCDIR-ICMR)",
+      "url": "https://ncdirindia.org/",
+      "description": "India's National Cancer Registry Programme data and reports.",
+      "format": "Online (free)"
+    },
+    {
+      "title": "NCCN Guidelines for Patients (Patient Editions)",
+      "url": "https://www.nccn.org/patientresources/patient-resources/guidelines-for-patients",
+      "description": "Free patient-friendly versions of NCCN clinical guidelines for all major cancer types.",
+      "format": "PDF (free)"
+    },
+    {
+      "title": "When Breath Becomes Air — Paul Kalanithi",
+      "type": "Memoir",
+      "description": "A neurosurgeon's memoir about facing stage IV lung cancer. Essential reading for patients and caregivers.",
+      "format": "Book"
+    },
+    {
+      "title": "The Emperor of All Maladies — Siddhartha Mukherjee",
+      "type": "Book",
+      "description": "Pulitzer-winning biography of cancer. Essential background for understanding the disease.",
+      "format": "Book"
+    }
+  ],
+
+  "emergencyContacts": {
+    "india": [
+      { "name": "iCall (Mental Health Crisis)", "number": "9152987821" },
+      { "name": "Vandrevala Foundation Helpline", "number": "1860-2662-345 / 1800-2333-330" },
+      { "name": "Indian Cancer Society Helpline", "number": "1800-22-1951" },
+      { "name": "CanSupport Helpline (Delhi)", "number": "+91-11-4101-0539" },
+      { "name": "NIMHANS Helpline", "number": "080-46110007" }
+    ],
+    "usa": [
+      { "name": "NCI Cancer Information Service", "number": "1-800-422-6237" },
+      { "name": "American Cancer Society 24/7", "number": "1-800-227-2345" },
+      { "name": "Cancer Care", "number": "1-800-813-4673" },
+      { "name": "Crisis Text Line", "number": "Text HOME to 741741" }
+    ],
+    "uk": [
+      { "name": "Cancer Research UK Nurse Line", "number": "0808-800-4040" },
+      { "name": "Macmillan Support Line", "number": "0808-808-0000" },
+      { "name": "Marie Curie", "number": "0800-090-2309" }
+    ],
+    "australia": [
+      { "name": "Cancer Council Helpline", "number": "13 11 20" }
+    ],
+    "canada": [
+      { "name": "Canadian Cancer Society", "number": "1-888-939-3333" }
+    ]
+  }
+}

@@ -56,7 +56,6 @@ function CategoryBadge({ category }: { category: CancerCategory }) {
 // ── Video embed component ──────────────────────────────────────────────────
 function VideoEmbed({ youtubeId, vimeoId, title, channel, durationMins }: {
   youtubeId?: string; vimeoId?: string; title: string; channel: string; durationMins?: number;
-})
 }) {
   const [active, setActive] = useState(false);
 

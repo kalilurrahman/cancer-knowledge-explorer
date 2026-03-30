@@ -104,7 +104,7 @@ export function GeographyResourcesSection({ data }: { data: KnowledgeBase }) {
       </h3>
 
       {/* India */}
-      <SectionAccordion id="india" icon={<Building2 className="w-4 h-4" />} title="India" badge={`${geo.india.hospitals.length} hospitals`} defaultOpen>
+      <SectionAccordion icon={<Building2 className="w-4 h-4" />} title="India" badge={`${geo.india.hospitals.length} hospitals`} defaultOpen>
         <p className="text-xs leading-relaxed mb-3">{geo.india.overview}</p>
 
         <div className="space-y-3">
@@ -173,7 +173,7 @@ export function GeographyResourcesSection({ data }: { data: KnowledgeBase }) {
       </SectionAccordion>
 
       {/* USA */}
-      <SectionAccordion id="usa" icon={<Building2 className="w-4 h-4" />} title="United States">
+      <SectionAccordion icon={<Building2 className="w-4 h-4" />} title="United States">
         {geo.usa.overview && <p className="text-xs leading-relaxed mb-3">{geo.usa.overview}</p>}
         <div className="space-y-3">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -201,7 +201,7 @@ export function GeographyResourcesSection({ data }: { data: KnowledgeBase }) {
       {(["uk", "australia", "canada", "uae"] as const).map((key) => {
         const country = geo[key];
         return (
-          <SectionAccordion key={key} id={key} icon={<Building2 className="w-4 h-4" />} title={country.title} badge={country.resources.length}>
+          <SectionAccordion key={key} icon={<Building2 className="w-4 h-4" />} title={country.title} badge={country.resources.length}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {country.resources.map((r) => (
                 <ResourceLink key={r.name} name={r.name} url={r.url} description={r.description} helpline={r.helpline} />
@@ -224,7 +224,7 @@ export function TreatmentModalitiesSection({ data }: { data: KnowledgeBase }) {
         {data.treatmentModalities.title}
       </h3>
       {data.treatmentModalities.items.map((t) => (
-        <SectionAccordion key={t.id} id={t.id} icon={<Stethoscope className="w-4 h-4" />} title={t.name}>
+        <SectionAccordion key={t.id} icon={<Stethoscope className="w-4 h-4" />} title={t.name}>
           <p className="text-xs leading-relaxed mb-3">{t.description}</p>
           {t.subtypes && t.subtypes.length > 0 && (
             <div className="mb-3">
@@ -289,7 +289,7 @@ export function SupportResourcesSection({ data }: { data: KnowledgeBase }) {
       {SUPPORT_SECTIONS.map(({ key, label, icon }) => {
         const items = data.supportResources[key];
         return (
-          <SectionAccordion key={key} id={key} icon={icon} title={label} badge={items.length}>
+          <SectionAccordion key={key} icon={icon} title={label} badge={items.length}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {items.map((r) => (
                 <ResourceLink key={r.name} name={r.name} url={r.url} description={r.description} helpline={r.helpline}
@@ -388,7 +388,7 @@ export function EmergencyContactsSection({ data }: { data: KnowledgeBase }) {
         If you or someone you know is in a cancer-related crisis, reach out to these helplines immediately.
       </div>
       {Object.entries(data.emergencyContacts).map(([country, contacts]) => (
-        <SectionAccordion key={country} id={`emergency-${country}`} icon={<Phone className="w-4 h-4" />}
+        <SectionAccordion key={country}`} icon={<Phone className="w-4 h-4" />}
           title={COUNTRY_LABELS[country] ?? country} badge={contacts.length} defaultOpen={country === "india"}>
           <div className="space-y-2">
             {contacts.map((c) => (
@@ -437,7 +437,7 @@ export function ExtendedCancerTypesSection({ data }: { data: KnowledgeBase }) {
 
       <div className="space-y-2">
         {filtered.map((cancer) => (
-          <SectionAccordion key={cancer.id} id={cancer.id} icon={<Stethoscope className="w-4 h-4" />}
+          <SectionAccordion key={cancer.id} icon={<Stethoscope className="w-4 h-4" />}
             title={cancer.name} badge={cancer.icdCode}>
             <div className="space-y-3">
               {cancer.aliases && cancer.aliases.length > 0 && (

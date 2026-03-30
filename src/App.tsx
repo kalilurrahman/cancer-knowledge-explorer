@@ -5,8 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   Search, X, ExternalLink, ChevronDown, ChevronUp,
   BookOpen, Globe, Activity, AlertCircle, Stethoscope,
-  FlaskConical, Users, FileText, MapPin, Dna, Play, Video,
-  Heart, BookMarked, AlertTriangle, Microscope
+  FlaskConical, Users, FileText, MapPin, Dna, Play, Video
 } from "lucide-react";
 
 import { cancersAC } from "./data/cancers-a-c";

@@ -1,4 +1,6 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
+import { Navbar } from "./components/Navbar";
+import { Footer } from "./components/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Search, X, ExternalLink, ChevronDown, ChevronUp,
@@ -405,11 +407,21 @@ export default function CancerBook() {
   // count how many have videos
   const withVideos = allCancers.filter(c => c.videos && c.videos.length > 0).length;
 
+  // Apply dark theme on mount if no theme stored
+  useEffect(() => {
+    const stored = localStorage.getItem("theme");
+    if (!stored) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
+      <Navbar />
 
       {/* ── Hero ── */}
-      <div className="border-b border-border bg-gradient-to-b from-primary/5 to-transparent">
+      <div className="border-b border-border bg-gradient-to-b from-primary/5 to-transparent pt-12">
         <div className="max-w-6xl mx-auto px-6 py-14">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <div className="flex items-center gap-2 mb-4">
@@ -580,16 +592,9 @@ export default function CancerBook() {
           )}
         </AnimatePresence>
 
-        {/* ── Disclaimer ── */}
-        <div className="mt-12 p-4 border border-amber-500/20 bg-amber-500/5 rounded-sm">
-          <p className="text-xs text-amber-400/80 leading-relaxed">
-            <span className="font-semibold">⚠ Disclaimer:</span> This Cancer Knowledge Book is for informational and educational purposes only.
-            It does not constitute medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional for medical decisions.
-            Cost ranges are indicative estimates and vary significantly by region, insurance status, and individual circumstances.
-            Video content is sourced from third-party channels and is provided for educational purposes.
-          </p>
-        </div>
       </div>
+
+      <Footer />
 
       {/* ── Detail panel ── */}
       <AnimatePresence>

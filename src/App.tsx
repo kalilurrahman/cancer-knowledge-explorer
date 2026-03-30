@@ -5,7 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   Search, X, ExternalLink, ChevronDown, ChevronUp,
   BookOpen, Globe, Activity, AlertCircle, Stethoscope,
-  FlaskConical, Users, FileText, MapPin, Dna, Play, Video
+  FlaskConical, Users, FileText, MapPin, Dna, Play, Video,
+  Heart, BookMarked, AlertTriangle, Microscope
 } from "lucide-react";
 
 import { cancersAC } from "./data/cancers-a-c";
@@ -17,6 +18,17 @@ import { cancersExpanded } from "./data/cancers-expanded";
 import { cancersExpanded2 } from "./data/cancers-expanded-2";
 import { cancersExpanded3 } from "./data/cancers-expanded-3";
 import type { CancerEntry, CancerCategory } from "./data/types";
+import { useKnowledgeBase } from "./hooks/use-knowledge-base";
+import {
+  GlobalResourcesSection,
+  GeographyResourcesSection,
+  TreatmentModalitiesSection,
+  SupportResourcesSection,
+  ClinicalTrialsSection,
+  BooksReferencesSection,
+  EmergencyContactsSection,
+  ExtendedCancerTypesSection,
+} from "./components/KnowledgeBaseSections";
 
 const allCancers: CancerEntry[] = [
   ...cancersAC,

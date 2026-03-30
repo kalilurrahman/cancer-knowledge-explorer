@@ -388,7 +388,7 @@ export function EmergencyContactsSection({ data }: { data: KnowledgeBase }) {
         If you or someone you know is in a cancer-related crisis, reach out to these helplines immediately.
       </div>
       {Object.entries(data.emergencyContacts).map(([country, contacts]) => (
-        <SectionAccordion key={country}`} icon={<Phone className="w-4 h-4" />}
+        <SectionAccordion key={country} icon={<Phone className="w-4 h-4" />}
           title={COUNTRY_LABELS[country] ?? country} badge={contacts.length} defaultOpen={country === "india"}>
           <div className="space-y-2">
             {contacts.map((c) => (

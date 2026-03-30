@@ -6,15 +6,15 @@ import {
   FlaskConical, Users, FileText, MapPin, Dna, Play, Video
 } from "lucide-react";
 
-import { cancersAC } from "./data/cancer-book/cancers-a-c";
-import { cancersDG } from "./data/cancer-book/cancers-d-g";
-import { cancersHL } from "./data/cancer-book/cancers-h-l";
-import { cancersMP } from "./data/cancer-book/cancers-m-p";
-import { cancersQZ } from "./data/cancer-book/cancers-q-z";
-import { cancersExpanded } from "./data/cancer-book/cancers-expanded";
-import { cancersExpanded2 } from "./data/cancer-book/cancers-expanded-2";
-import { cancersExpanded3 } from "./data/cancer-book/cancers-expanded-3";
-import type { CancerEntry, CancerCategory } from "./data/cancer-book/types";
+import { cancersAC } from "./data/cancers-a-c";
+import { cancersDG } from "./data/cancers-d-g";
+import { cancersHL } from "./data/cancers-h-l";
+import { cancersMP } from "./data/cancers-m-p";
+import { cancersQZ } from "./data/cancers-q-z";
+import { cancersExpanded } from "./data/cancers-expanded";
+import { cancersExpanded2 } from "./data/cancers-expanded-2";
+import { cancersExpanded3 } from "./data/cancers-expanded-3";
+import type { CancerEntry, CancerCategory } from "./data/types";
 
 const allCancers: CancerEntry[] = [
   ...cancersAC,

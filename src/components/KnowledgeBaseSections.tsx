@@ -10,8 +10,8 @@ import type { KnowledgeBase } from "@/data/knowledge-base-types";
 
 /* ── Shared helpers ───────────────────────────────────────── */
 
-function SectionAccordion({ id, icon, title, badge, defaultOpen, children }: {
-  id: string; icon: React.ReactNode; title: string; badge?: number | string; defaultOpen?: boolean; children: React.ReactNode;
+function SectionAccordion({ icon, title, badge, defaultOpen, children }: {
+  icon: React.ReactNode; title: string; badge?: number | string; defaultOpen?: boolean; children: React.ReactNode;
 }) {
   const [open, setOpen] = useState(defaultOpen ?? false);
   return (

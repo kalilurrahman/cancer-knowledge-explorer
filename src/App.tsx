@@ -483,141 +483,185 @@ export default function CancerBook() {
         </div>
       </div>
 
+      {/* ── Tab Navigation ── */}
+      <div className="border-b border-border bg-card/50">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex gap-1 overflow-x-auto py-2 scrollbar-thin">
+            {TAB_META.map(({ key, label, icon }) => (
+              <button
+                key={key}
+                onClick={() => setActiveTab(key)}
+                className={`inline-flex items-center gap-1.5 px-3 py-2 text-xs font-medium rounded-sm border whitespace-nowrap transition-all ${
+                  activeTab === key
+                    ? "bg-primary text-primary-foreground border-primary"
+                    : "bg-transparent border-transparent text-muted-foreground hover:text-foreground hover:bg-primary/5"
+                }`}
+              >
+                {icon}
+                {label}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
       <div className="max-w-6xl mx-auto px-6 py-8">
 
-        {/* ── Search + filters ── */}
-        <div className="flex flex-col gap-4 mb-8">
-          <div className="relative max-w-lg">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-            <input
-              type="text"
-              value={query}
-              onChange={e => setQuery(e.target.value)}
-              placeholder="Search cancer name, symptom, alternate name, risk factor…"
-              className="w-full pl-10 pr-10 py-2.5 bg-card border border-border rounded-sm text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
-            />
-            {query && (
-              <button onClick={() => setQuery("")} className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground">
-                <X className="w-4 h-4" />
-              </button>
-            )}
-          </div>
+        {/* ── Cancer Types Tab (original) ── */}
+        {activeTab === "cancers" && (
+          <>
+            {/* Search + filters */}
+            <div className="flex flex-col gap-4 mb-8">
+              <div className="relative max-w-lg">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                <input
+                  type="text"
+                  value={query}
+                  onChange={e => setQuery(e.target.value)}
+                  placeholder="Search cancer name, symptom, alternate name, risk factor…"
+                  className="w-full pl-10 pr-10 py-2.5 bg-card border border-border rounded-sm text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
+                />
+                {query && (
+                  <button onClick={() => setQuery("")} className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground">
+                    <X className="w-4 h-4" />
+                  </button>
+                )}
+              </div>
 
-          <div className="flex flex-wrap gap-2">
-            {categories.map(cat => {
-              const isAll = cat === "all";
-              const isActive = activeCategory === cat;
-              const meta = isAll ? null : CATEGORY_META[cat as CancerCategory];
-              return (
-                <button
-                  key={cat}
-                  onClick={() => setActiveCategory(cat)}
-                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-sm border transition-all ${
-                    isActive
-                      ? "bg-primary text-primary-foreground border-primary"
-                      : "bg-card border-border text-muted-foreground hover:border-primary/50 hover:text-foreground"
-                  }`}
+              <div className="flex flex-wrap gap-2">
+                {categories.map(cat => {
+                  const isAll = cat === "all";
+                  const isActive = activeCategory === cat;
+                  const meta = isAll ? null : CATEGORY_META[cat as CancerCategory];
+                  return (
+                    <button
+                      key={cat}
+                      onClick={() => setActiveCategory(cat)}
+                      className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-sm border transition-all ${
+                        isActive
+                          ? "bg-primary text-primary-foreground border-primary"
+                          : "bg-card border-border text-muted-foreground hover:border-primary/50 hover:text-foreground"
+                      }`}
+                    >
+                      {isAll ? "All Types" : meta!.label}
+                      <span className={`font-mono ${isActive ? "opacity-70" : "opacity-50"}`}>
+                        {categoryCounts[cat] ?? 0}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Results count */}
+            <div className="mb-4 flex items-center gap-2">
+              <p className="text-xs text-muted-foreground font-mono">
+                {filtered.length} of {allCancers.length} entries
+                {query && <span> matching "<span className="text-foreground">{query}</span>"</span>}
+              </p>
+              {filtered.some(c => c.videos && c.videos.length > 0) && (
+                <span className="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] bg-red-500/10 border border-red-500/20 text-red-400 rounded-sm">
+                  <Video className="w-3 h-3" />
+                  some entries include videos
+                </span>
+              )}
+            </div>
+
+            {/* Grid */}
+            <AnimatePresence mode="wait">
+              {filtered.length === 0 ? (
+                <motion.div
+                  key="empty"
+                  initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+                  className="text-center py-24 text-muted-foreground"
                 >
-                  {isAll ? "All Types" : meta!.label}
-                  <span className={`font-mono ${isActive ? "opacity-70" : "opacity-50"}`}>
-                    {categoryCounts[cat] ?? 0}
-                  </span>
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Results count */}
-        <div className="mb-4 flex items-center gap-2">
-          <p className="text-xs text-muted-foreground font-mono">
-            {filtered.length} of {allCancers.length} entries
-            {query && <span> matching "<span className="text-foreground">{query}</span>"</span>}
-          </p>
-          {filtered.some(c => c.videos && c.videos.length > 0) && (
-            <span className="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] bg-red-500/10 border border-red-500/20 text-red-400 rounded-sm">
-              <Video className="w-3 h-3" />
-              some entries include videos
-            </span>
-          )}
-        </div>
-
-        {/* ── Grid ── */}
-        <AnimatePresence mode="wait">
-          {filtered.length === 0 ? (
-            <motion.div
-              key="empty"
-              initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-              className="text-center py-24 text-muted-foreground"
-            >
-              <Search className="w-10 h-10 mx-auto mb-3 opacity-30" />
-              <p className="text-sm">No cancers found matching your search.</p>
-              <button
-                onClick={() => { setQuery(""); setActiveCategory("all"); }}
-                className="mt-3 text-xs text-primary underline"
-              >
-                Clear filters
-              </button>
-            </motion.div>
-          ) : (
-            <motion.div
-              key="grid"
-              initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
-            >
-              {filtered.map((cancer, i) => (
-                <motion.button
-                  key={cancer.id}
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.28, delay: Math.min(i * 0.025, 0.4) }}
-                  onClick={() => setSelectedCancer(cancer)}
-                  className="group text-left p-5 border border-border bg-card hover:border-primary/50 hover:shadow-lg hover:-translate-y-0.5 transition-all rounded-sm"
+                  <Search className="w-10 h-10 mx-auto mb-3 opacity-30" />
+                  <p className="text-sm">No cancers found matching your search.</p>
+                  <button
+                    onClick={() => { setQuery(""); setActiveCategory("all"); }}
+                    className="mt-3 text-xs text-primary underline"
+                  >
+                    Clear filters
+                  </button>
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="grid"
+                  initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+                  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
                 >
-                  <div className="flex items-start justify-between gap-2 mb-3">
-                    <CategoryBadge category={cancer.category} />
-                    <div className="flex items-center gap-1.5">
-                      {cancer.videos && cancer.videos.length > 0 && (
-                        <span className="inline-flex items-center gap-0.5 px-1.5 py-0.5 text-[9px] bg-red-500/10 border border-red-500/20 text-red-400 rounded-sm shrink-0">
-                          <Video className="w-2.5 h-2.5" />{cancer.videos.length}
-                        </span>
-                      )}
-                      <ExternalLink className="w-3.5 h-3.5 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
-                    </div>
-                  </div>
-
-                  <h3 className="font-serif text-base text-foreground group-hover:text-primary transition-colors mb-1.5 leading-snug">
-                    {cancer.name}
-                  </h3>
-
-                  {cancer.alternateNames.length > 0 && (
-                    <p className="text-[10px] text-muted-foreground font-mono mb-2 truncate">
-                      {cancer.alternateNames.slice(0, 2).join(" · ")}
-                    </p>
-                  )}
-
-                  <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2 mb-3">
-                    {cancer.description}
-                  </p>
-
-                  <div className="border-t border-border/50 pt-3 flex items-center justify-between gap-2 flex-wrap">
-                    <div className="flex items-center gap-1 text-[10px] text-muted-foreground font-mono">
-                      <FlaskConical className="w-3 h-3" />{cancer.treatments.length} treatments
-                    </div>
-                    <div className="flex items-center gap-1 text-[10px] text-muted-foreground font-mono">
-                      <MapPin className="w-3 h-3" />{cancer.geographyNotes.length} regions
-                    </div>
-                    {cancer.survivalRates && (
-                      <div className="flex items-center gap-1 text-[10px] text-primary font-mono">
-                        <Activity className="w-3 h-3" />Survival data
+                  {filtered.map((cancer, i) => (
+                    <motion.button
+                      key={cancer.id}
+                      initial={{ opacity: 0, y: 16 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.28, delay: Math.min(i * 0.025, 0.4) }}
+                      onClick={() => setSelectedCancer(cancer)}
+                      className="group text-left p-5 border border-border bg-card hover:border-primary/50 hover:shadow-lg hover:-translate-y-0.5 transition-all rounded-sm"
+                    >
+                      <div className="flex items-start justify-between gap-2 mb-3">
+                        <CategoryBadge category={cancer.category} />
+                        <div className="flex items-center gap-1.5">
+                          {cancer.videos && cancer.videos.length > 0 && (
+                            <span className="inline-flex items-center gap-0.5 px-1.5 py-0.5 text-[9px] bg-red-500/10 border border-red-500/20 text-red-400 rounded-sm shrink-0">
+                              <Video className="w-2.5 h-2.5" />{cancer.videos.length}
+                            </span>
+                          )}
+                          <ExternalLink className="w-3.5 h-3.5 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
+                        </div>
                       </div>
-                    )}
-                  </div>
-                </motion.button>
-              ))}
-            </motion.div>
-          )}
-        </AnimatePresence>
+
+                      <h3 className="font-serif text-base text-foreground group-hover:text-primary transition-colors mb-1.5 leading-snug">
+                        {cancer.name}
+                      </h3>
+
+                      {cancer.alternateNames.length > 0 && (
+                        <p className="text-[10px] text-muted-foreground font-mono mb-2 truncate">
+                          {cancer.alternateNames.slice(0, 2).join(" · ")}
+                        </p>
+                      )}
+
+                      <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2 mb-3">
+                        {cancer.description}
+                      </p>
+
+                      <div className="border-t border-border/50 pt-3 flex items-center justify-between gap-2 flex-wrap">
+                        <div className="flex items-center gap-1 text-[10px] text-muted-foreground font-mono">
+                          <FlaskConical className="w-3 h-3" />{cancer.treatments.length} treatments
+                        </div>
+                        <div className="flex items-center gap-1 text-[10px] text-muted-foreground font-mono">
+                          <MapPin className="w-3 h-3" />{cancer.geographyNotes.length} regions
+                        </div>
+                        {cancer.survivalRates && (
+                          <div className="flex items-center gap-1 text-[10px] text-primary font-mono">
+                            <Activity className="w-3 h-3" />Survival data
+                          </div>
+                        )}
+                      </div>
+                    </motion.button>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </>
+        )}
+
+        {/* ── Knowledge Base Tabs ── */}
+        {kbLoading && activeTab !== "cancers" && (
+          <div className="text-center py-24 text-muted-foreground">
+            <div className="animate-spin w-6 h-6 border-2 border-primary border-t-transparent rounded-full mx-auto mb-3" />
+            <p className="text-sm">Loading knowledge base…</p>
+          </div>
+        )}
+
+        {kb && activeTab === "resources" && <GlobalResourcesSection data={kb} />}
+        {kb && activeTab === "geography" && <GeographyResourcesSection data={kb} />}
+        {kb && activeTab === "treatments" && <TreatmentModalitiesSection data={kb} />}
+        {kb && activeTab === "support" && <SupportResourcesSection data={kb} />}
+        {kb && activeTab === "trials" && <ClinicalTrialsSection data={kb} />}
+        {kb && activeTab === "references" && <BooksReferencesSection data={kb} />}
+        {kb && activeTab === "emergency" && <EmergencyContactsSection data={kb} />}
+        {kb && activeTab === "extended" && <ExtendedCancerTypesSection data={kb} />}
 
       </div>
 

@@ -385,10 +385,26 @@ function CancerDetailPanel({ cancer, onClose }: { cancer: CancerEntry; onClose: 
 }
 
 // ── Main page ────────────────────────────────────────────────────────────────
+type MainTab = "cancers" | "resources" | "treatments" | "geography" | "support" | "trials" | "references" | "emergency" | "extended";
+
+const TAB_META: Array<{ key: MainTab; label: string; icon: React.ReactNode }> = [
+  { key: "cancers", label: "Cancer Types", icon: <BookOpen className="w-3.5 h-3.5" /> },
+  { key: "extended", label: "A–Z Extended", icon: <Dna className="w-3.5 h-3.5" /> },
+  { key: "treatments", label: "Treatments", icon: <FlaskConical className="w-3.5 h-3.5" /> },
+  { key: "geography", label: "Geography", icon: <MapPin className="w-3.5 h-3.5" /> },
+  { key: "resources", label: "Global Resources", icon: <Globe className="w-3.5 h-3.5" /> },
+  { key: "support", label: "Support", icon: <Users className="w-3.5 h-3.5" /> },
+  { key: "trials", label: "Trials & Diagnostics", icon: <Stethoscope className="w-3.5 h-3.5" /> },
+  { key: "references", label: "Books & Refs", icon: <FileText className="w-3.5 h-3.5" /> },
+  { key: "emergency", label: "Emergency", icon: <AlertCircle className="w-3.5 h-3.5" /> },
+];
+
 export default function CancerBook() {
   const [query, setQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState<CancerCategory | "all">("all");
   const [selectedCancer, setSelectedCancer] = useState<CancerEntry | null>(null);
+  const [activeTab, setActiveTab] = useState<MainTab>("cancers");
+  const { data: kb, loading: kbLoading } = useKnowledgeBase();
 
   const categories: Array<CancerCategory | "all"> = [
     "all", "carcinoma", "leukemia", "lymphoma", "sarcoma", "melanoma", "cns", "other",

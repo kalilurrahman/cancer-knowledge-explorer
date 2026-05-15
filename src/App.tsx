@@ -1,11 +1,12 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Search, X, ExternalLink, ChevronDown, ChevronUp,
   BookOpen, Globe, Activity, AlertCircle, Stethoscope,
-  FlaskConical, Users, FileText, MapPin, Dna, Play, Video
+  FlaskConical, Users, FileText, MapPin, Dna, Play, Video,
+  Menu as MenuIcon, LayoutGrid
 } from "lucide-react";
 
 import { cancersAC } from "./data/cancers-a-c";
@@ -16,6 +17,8 @@ import { cancersQZ } from "./data/cancers-q-z";
 import { cancersExpanded } from "./data/cancers-expanded";
 import { cancersExpanded2 } from "./data/cancers-expanded-2";
 import { cancersExpanded3 } from "./data/cancers-expanded-3";
+import { cancersExpanded4 } from "./data/cancers-expanded-4";
+import { videoEnrichment } from "./data/video-enrichment";
 import type { CancerEntry, CancerCategory } from "./data/types";
 import { useKnowledgeBase } from "./hooks/use-knowledge-base";
 import {
@@ -29,7 +32,8 @@ import {
   ExtendedCancerTypesSection,
 } from "./components/KnowledgeBaseSections";
 
-const allCancers: CancerEntry[] = [
+// Merge all cancer sources and enrich with video data
+const allCancersRaw: CancerEntry[] = [
   ...cancersAC,
   ...cancersDG,
   ...cancersHL,
@@ -38,7 +42,21 @@ const allCancers: CancerEntry[] = [
   ...cancersExpanded,
   ...cancersExpanded2,
   ...cancersExpanded3,
-].sort((a, b) => a.name.localeCompare(b.name));
+  ...cancersExpanded4,
+];
+
+// Deduplicate by ID (prefer first occurrence)
+const seen = new Set<string>();
+const allCancers: CancerEntry[] = allCancersRaw
+  .filter(c => { if (seen.has(c.id)) return false; seen.add(c.id); return true; })
+  .map(c => {
+    const extra = videoEnrichment[c.id];
+    if (extra && (!c.videos || c.videos.length === 0)) {
+      return { ...c, videos: extra };
+    }
+    return c;
+  })
+  .sort((a, b) => a.name.localeCompare(b.name));
 
 const CATEGORY_META: Record<CancerCategory, { label: string; color: string; bg: string; ring: string }> = {
   carcinoma: { label: "Carcinoma",  color: "text-teal-400",   bg: "bg-teal-400/10 border-teal-400/20",   ring: "ring-teal-400/40" },
@@ -404,7 +422,20 @@ export default function CancerBook() {
   const [activeCategory, setActiveCategory] = useState<CancerCategory | "all">("all");
   const [selectedCancer, setSelectedCancer] = useState<CancerEntry | null>(null);
   const [activeTab, setActiveTab] = useState<MainTab>("cancers");
+  const [sectionMenuOpen, setSectionMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
   const { data: kb, loading: kbLoading } = useKnowledgeBase();
+
+  // Close section menu on outside click
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+        setSectionMenuOpen(false);
+      }
+    }
+    if (sectionMenuOpen) document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, [sectionMenuOpen]);
 
   const categories: Array<CancerCategory | "all"> = [
     "all", "carcinoma", "leukemia", "lymphoma", "sarcoma", "melanoma", "cns", "other",
@@ -483,24 +514,115 @@ export default function CancerBook() {
         </div>
       </div>
 
-      {/* ── Tab Navigation ── */}
-      <div className="border-b border-border bg-card/50">
+      {/* ── Omni-Channel Section Navigation ── */}
+      <div className="border-b border-border bg-card/50 sticky top-12 z-40">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="flex gap-1 overflow-x-auto py-2 scrollbar-thin">
-            {TAB_META.map(({ key, label, icon }) => (
+          <div className="flex items-center justify-between py-2 gap-2">
+            {/* Active tab indicator (always visible) */}
+            <div className="flex items-center gap-2">
+              <LayoutGrid className="w-4 h-4 text-primary" />
+              <span className="text-xs font-semibold text-foreground uppercase tracking-wider">
+                {TAB_META.find(t => t.key === activeTab)?.label ?? "Sections"}
+              </span>
+            </div>
+
+            {/* Desktop: show primary tabs inline */}
+            <div className="hidden md:flex items-center gap-1">
+              {TAB_META.slice(0, 4).map(({ key, label, icon }) => (
+                <button
+                  key={key}
+                  onClick={() => setActiveTab(key)}
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-sm border whitespace-nowrap transition-all ${
+                    activeTab === key
+                      ? "bg-primary text-primary-foreground border-primary"
+                      : "bg-transparent border-transparent text-muted-foreground hover:text-foreground hover:bg-primary/5"
+                  }`}
+                >
+                  {icon}
+                  {label}
+                </button>
+              ))}
+              {/* "More" dropdown for remaining tabs */}
+              <div className="relative" ref={menuRef}>
+                <button
+                  onClick={() => setSectionMenuOpen(!sectionMenuOpen)}
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-sm border whitespace-nowrap transition-all ${
+                    TAB_META.slice(4).some(t => t.key === activeTab)
+                      ? "bg-primary/20 text-primary border-primary/40"
+                      : "bg-transparent border-transparent text-muted-foreground hover:text-foreground hover:bg-primary/5"
+                  }`}
+                >
+                  <MenuIcon className="w-3.5 h-3.5" />
+                  More
+                  <ChevronDown className={`w-3 h-3 transition-transform ${sectionMenuOpen ? "rotate-180" : ""}`} />
+                </button>
+                <AnimatePresence>
+                  {sectionMenuOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -4 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -4 }}
+                      transition={{ duration: 0.15 }}
+                      className="absolute right-0 top-full mt-1.5 w-56 bg-popover border border-border rounded-md shadow-xl z-50 py-1"
+                    >
+                      {TAB_META.slice(4).map(({ key, label, icon }) => (
+                        <button
+                          key={key}
+                          onClick={() => { setActiveTab(key); setSectionMenuOpen(false); }}
+                          className={`w-full flex items-center gap-2.5 px-4 py-2 text-xs transition-colors text-left ${
+                            activeTab === key
+                              ? "bg-primary/10 text-primary font-semibold"
+                              : "text-muted-foreground hover:text-foreground hover:bg-primary/5"
+                          }`}
+                        >
+                          <span className="text-primary">{icon}</span>
+                          {label}
+                        </button>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            </div>
+
+            {/* Mobile: hamburger menu for all sections */}
+            <div className="md:hidden relative" ref={menuRef}>
               <button
-                key={key}
-                onClick={() => setActiveTab(key)}
-                className={`inline-flex items-center gap-1.5 px-3 py-2 text-xs font-medium rounded-sm border whitespace-nowrap transition-all ${
-                  activeTab === key
-                    ? "bg-primary text-primary-foreground border-primary"
-                    : "bg-transparent border-transparent text-muted-foreground hover:text-foreground hover:bg-primary/5"
-                }`}
+                onClick={() => setSectionMenuOpen(!sectionMenuOpen)}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-sm border border-border bg-card text-foreground hover:bg-primary/5 transition-all"
+                aria-label="Open sections menu"
               >
-                {icon}
-                {label}
+                <MenuIcon className="w-4 h-4" />
+                Sections
+                <ChevronDown className={`w-3 h-3 transition-transform ${sectionMenuOpen ? "rotate-180" : ""}`} />
               </button>
-            ))}
+              <AnimatePresence>
+                {sectionMenuOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -4 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -4 }}
+                    transition={{ duration: 0.15 }}
+                    className="absolute right-0 top-full mt-1.5 w-64 bg-popover border border-border rounded-md shadow-xl z-50 py-1"
+                  >
+                    {TAB_META.map(({ key, label, icon }) => (
+                      <button
+                        key={key}
+                        onClick={() => { setActiveTab(key); setSectionMenuOpen(false); }}
+                        className={`w-full flex items-center gap-2.5 px-4 py-2.5 text-xs transition-colors text-left ${
+                          activeTab === key
+                            ? "bg-primary/10 text-primary font-semibold"
+                            : "text-muted-foreground hover:text-foreground hover:bg-primary/5"
+                        }`}
+                      >
+                        <span className="text-primary">{icon}</span>
+                        {label}
+                      </button>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           </div>
         </div>
       </div>

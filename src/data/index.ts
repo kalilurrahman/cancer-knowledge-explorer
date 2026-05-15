@@ -8,5 +8,7 @@ export { cancersQZ } from "./cancers-q-z";
 export { cancersExpanded } from "./cancers-expanded";
 export { cancersExpanded2 } from "./cancers-expanded-2";
 export { cancersExpanded3 } from "./cancers-expanded-3";
+export { cancersExpanded4 } from "./cancers-expanded-4";
+export { videoEnrichment } from "./video-enrichment";
 
 export type { CancerEntry, CancerCategory, Treatment, SupportOrganization, ExternalResource, GeographyNote, VideoResource } from "./types";

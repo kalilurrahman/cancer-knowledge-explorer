@@ -9,6 +9,7 @@ export { cancersExpanded } from "./cancers-expanded";
 export { cancersExpanded2 } from "./cancers-expanded-2";
 export { cancersExpanded3 } from "./cancers-expanded-3";
 export { cancersExpanded4 } from "./cancers-expanded-4";
+export { cancersExpanded5 } from "./cancers-expanded-5";
 export { videoEnrichment } from "./video-enrichment";
 
 export type { CancerEntry, CancerCategory, Treatment, SupportOrganization, ExternalResource, GeographyNote, VideoResource } from "./types";

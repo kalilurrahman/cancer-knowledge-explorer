@@ -44,6 +44,7 @@ const allCancersRaw: CancerEntry[] = [
   ...cancersExpanded2,
   ...cancersExpanded3,
   ...cancersExpanded4,
+  ...cancersExpanded5,
 ];
 
 // Deduplicate by ID (prefer first occurrence)

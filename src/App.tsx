@@ -241,6 +241,56 @@ function CancerDetailPanel({ cancer, onClose }: { cancer: CancerEntry; onClose: 
           </div>
         )}
 
+        {/* Verification banner */}
+        {cancer.verification && (
+          <div className="mx-6 mt-3 px-4 py-3 bg-emerald-500/10 border border-emerald-500/20 rounded-sm">
+            <div className="flex items-start justify-between gap-3 flex-wrap">
+              <div className="flex items-start gap-2">
+                <Stethoscope className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                <div className="text-xs text-foreground leading-relaxed">
+                  <span className="font-semibold">Content verified</span> by {cancer.verification.verifiedBy}
+                  <span className="text-muted-foreground"> · last reviewed {cancer.verification.verifiedDate}</span>
+                  {cancer.verification.nextDue && (
+                    <span className="text-muted-foreground"> · next due {cancer.verification.nextDue}</span>
+                  )}
+                </div>
+              </div>
+              <span className="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider rounded-sm bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                Confidence {cancer.verification.confidenceScore}/100
+              </span>
+            </div>
+            {cancer.verification.rationale && (
+              <p className="text-[11px] text-muted-foreground mt-2 leading-relaxed">{cancer.verification.rationale}</p>
+            )}
+            {cancer.verification.sources.length > 0 && (
+              <div className="flex flex-wrap gap-1.5 mt-2">
+                {cancer.verification.sources.map(s => (
+                  s.url ? (
+                    <a key={s.name} href={s.url} target="_blank" rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] rounded-sm bg-card border border-border text-foreground hover:border-emerald-500/40 hover:text-emerald-300 transition-colors">
+                      {s.name} <ExternalLink className="w-2.5 h-2.5" />
+                    </a>
+                  ) : (
+                    <span key={s.name} className="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] rounded-sm bg-card border border-border text-foreground">
+                      {s.name}
+                    </span>
+                  )
+                ))}
+              </div>
+            )}
+            {cancer.verification.knownGaps && cancer.verification.knownGaps.length > 0 && (
+              <details className="mt-2 group">
+                <summary className="text-[11px] text-amber-300/90 cursor-pointer hover:text-amber-200 select-none">
+                  Known gaps ({cancer.verification.knownGaps.length})
+                </summary>
+                <ul className="mt-1 ml-3 text-[11px] text-muted-foreground list-disc space-y-0.5">
+                  {cancer.verification.knownGaps.map(g => <li key={g}>{g}</li>)}
+                </ul>
+              </details>
+            )}
+          </div>
+        )}
+
         {/* Accordion */}
         <div className="p-6 space-y-2">
 

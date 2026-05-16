@@ -54,5 +54,23 @@ export interface CancerEntry {
   externalResources: ExternalResource[];
   videos?: VideoResource[];     // Optional curated video resources
   geographyNotes: GeographyNote[];
+  verification?: VerificationInfo; // Optional content-validation metadata
   lastUpdated: string;
+}
+
+export interface VerificationSource {
+  name: string;
+  url?: string;
+  type: "nci" | "acs" | "clinic" | "registry" | "literature" | "other";
+  lastAccessed?: string;
+}
+
+export interface VerificationInfo {
+  verifiedDate: string;
+  verifiedBy: string;
+  nextDue?: string;
+  confidenceScore: number; // 0-100
+  rationale?: string;
+  sources: VerificationSource[];
+  knownGaps?: string[];
 }

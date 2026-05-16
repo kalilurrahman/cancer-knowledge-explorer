@@ -18,6 +18,7 @@ import { cancersExpanded } from "./data/cancers-expanded";
 import { cancersExpanded2 } from "./data/cancers-expanded-2";
 import { cancersExpanded3 } from "./data/cancers-expanded-3";
 import { cancersExpanded4 } from "./data/cancers-expanded-4";
+import { cancersExpanded5 } from "./data/cancers-expanded-5";
 import { videoEnrichment } from "./data/video-enrichment";
 import type { CancerEntry, CancerCategory } from "./data/types";
 import { useKnowledgeBase } from "./hooks/use-knowledge-base";

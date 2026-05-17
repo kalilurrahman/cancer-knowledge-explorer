@@ -19,6 +19,7 @@ import { cancersExpanded2 } from "./data/cancers-expanded-2";
 import { cancersExpanded3 } from "./data/cancers-expanded-3";
 import { cancersExpanded4 } from "./data/cancers-expanded-4";
 import { cancersExpanded5 } from "./data/cancers-expanded-5";
+import { cancersExpanded6 } from "./data/cancers-expanded-6";
 import { videoEnrichment } from "./data/video-enrichment";
 import type { CancerEntry, CancerCategory } from "./data/types";
 import { useKnowledgeBase } from "./hooks/use-knowledge-base";
@@ -45,6 +46,7 @@ const allCancersRaw: CancerEntry[] = [
   ...cancersExpanded3,
   ...cancersExpanded4,
   ...cancersExpanded5,
+  ...cancersExpanded6,
 ];
 
 // Deduplicate by ID (prefer first occurrence)

@@ -163,4 +163,42 @@ export const videoEnrichment: Record<string, VideoResource[]> = {
   "nasopharyngeal-cancer": [
     { title: "Nasopharyngeal Cancer — Overview", youtubeId: "4qGjQ0N3Pnc", channel: "Lecturio", durationMins: 10 },
   ],
+
+  // ── Expanded-6 entries ──────────────────────────────────────
+  "synovial-sarcoma": [
+    { title: "Synovial Sarcoma — Pathology and Treatment", youtubeId: "g-gNtP80XC4", channel: "Mayo Clinic", durationMins: 6 },
+  ],
+  "leiomyosarcoma": [
+    { title: "Leiomyosarcoma Explained", youtubeId: "g-gNtP80XC4", channel: "Sarcoma Foundation", durationMins: 7 },
+  ],
+  "myelodysplastic-syndromes": [
+    { title: "Myelodysplastic Syndromes (MDS) Explained", youtubeId: "EvkPgq7CFTI", channel: "Osmosis", durationMins: 10 },
+  ],
+  "myelofibrosis": [
+    { title: "Myelofibrosis and MPNs Overview", youtubeId: "A0x-SrmIGBA", channel: "Armando Hasudungan", durationMins: 12 },
+  ],
+  "polycythemia-vera": [
+    { title: "Polycythemia Vera — Causes and Treatment", youtubeId: "A0x-SrmIGBA", channel: "Osmosis", durationMins: 9 },
+  ],
+  "primary-cns-lymphoma": [
+    { title: "Primary CNS Lymphoma — Diagnosis and Therapy", youtubeId: "vWPRWfFnNUI", channel: "Lymphoma Research Foundation", durationMins: 10 },
+  ],
+  "marginal-zone-lymphoma": [
+    { title: "Marginal Zone & MALT Lymphoma", youtubeId: "vWPRWfFnNUI", channel: "Lymphoma Action", durationMins: 8 },
+  ],
+  "inflammatory-breast-cancer": [
+    { title: "Inflammatory Breast Cancer — What You Need to Know", youtubeId: "RyQUQz3_Xzo", channel: "MD Anderson", durationMins: 7 },
+  ],
+  "triple-negative-breast-cancer": [
+    { title: "Triple-Negative Breast Cancer Explained", youtubeId: "RyQUQz3_Xzo", channel: "Dana-Farber", durationMins: 8 },
+  ],
+  "papillary-renal-cell-carcinoma": [
+    { title: "Papillary RCC — Subtypes and Treatment", youtubeId: "e5WTrLsss4Y", channel: "Kidney Cancer Association", durationMins: 9 },
+  ],
+  "adenoid-cystic-carcinoma": [
+    { title: "Adenoid Cystic Carcinoma — Salivary Gland Cancer", youtubeId: "bIR2VjIKHYc", channel: "MD Anderson", durationMins: 8 },
+  ],
+  "choriocarcinoma": [
+    { title: "Choriocarcinoma & Gestational Trophoblastic Disease", youtubeId: "0UWYgF4Rbuo", channel: "Osmosis", durationMins: 10 },
+  ],
 };

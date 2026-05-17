@@ -6,8 +6,9 @@ import {
   Search, X, ExternalLink, ChevronDown, ChevronUp,
   BookOpen, Globe, Activity, AlertCircle, Stethoscope,
   FlaskConical, Users, FileText, MapPin, Dna, Play, Video,
-  Menu as MenuIcon, LayoutGrid
+  Menu as MenuIcon, LayoutGrid, Book
 } from "lucide-react";
+import { BookView } from "./components/BookView";
 
 import { cancersAC } from "./data/cancers-a-c";
 import { cancersDG } from "./data/cancers-d-g";
@@ -19,6 +20,7 @@ import { cancersExpanded2 } from "./data/cancers-expanded-2";
 import { cancersExpanded3 } from "./data/cancers-expanded-3";
 import { cancersExpanded4 } from "./data/cancers-expanded-4";
 import { cancersExpanded5 } from "./data/cancers-expanded-5";
+import { cancersExpanded6 } from "./data/cancers-expanded-6";
 import { videoEnrichment } from "./data/video-enrichment";
 import type { CancerEntry, CancerCategory } from "./data/types";
 import { useKnowledgeBase } from "./hooks/use-knowledge-base";
@@ -45,6 +47,7 @@ const allCancersRaw: CancerEntry[] = [
   ...cancersExpanded3,
   ...cancersExpanded4,
   ...cancersExpanded5,
+  ...cancersExpanded6,
 ];
 
 // Deduplicate by ID (prefer first occurrence)
@@ -455,10 +458,11 @@ function CancerDetailPanel({ cancer, onClose }: { cancer: CancerEntry; onClose: 
 }
 
 // ── Main page ────────────────────────────────────────────────────────────────
-type MainTab = "cancers" | "resources" | "treatments" | "geography" | "support" | "trials" | "references" | "emergency" | "extended";
+type MainTab = "cancers" | "book" | "resources" | "treatments" | "geography" | "support" | "trials" | "references" | "emergency" | "extended";
 
 const TAB_META: Array<{ key: MainTab; label: string; icon: React.ReactNode }> = [
   { key: "cancers", label: "Cancer Types", icon: <BookOpen className="w-3.5 h-3.5" /> },
+  { key: "book", label: "The Book", icon: <Book className="w-3.5 h-3.5" /> },
   { key: "extended", label: "A–Z Extended", icon: <Dna className="w-3.5 h-3.5" /> },
   { key: "treatments", label: "Treatments", icon: <FlaskConical className="w-3.5 h-3.5" /> },
   { key: "geography", label: "Geography", icon: <MapPin className="w-3.5 h-3.5" /> },
@@ -820,8 +824,11 @@ export default function CancerBook() {
           </>
         )}
 
+        {/* ── Comprehensive Book view ── */}
+        {activeTab === "book" && <BookView cancers={allCancers} />}
+
         {/* ── Knowledge Base Tabs ── */}
-        {kbLoading && activeTab !== "cancers" && (
+        {kbLoading && activeTab !== "cancers" && activeTab !== "book" && (
           <div className="text-center py-24 text-muted-foreground">
             <div className="animate-spin w-6 h-6 border-2 border-primary border-t-transparent rounded-full mx-auto mb-3" />
             <p className="text-sm">Loading knowledge base…</p>

@@ -824,8 +824,11 @@ export default function CancerBook() {
           </>
         )}
 
+        {/* ── Comprehensive Book view ── */}
+        {activeTab === "book" && <BookView cancers={allCancers} />}
+
         {/* ── Knowledge Base Tabs ── */}
-        {kbLoading && activeTab !== "cancers" && (
+        {kbLoading && activeTab !== "cancers" && activeTab !== "book" && (
           <div className="text-center py-24 text-muted-foreground">
             <div className="animate-spin w-6 h-6 border-2 border-primary border-t-transparent rounded-full mx-auto mb-3" />
             <p className="text-sm">Loading knowledge base…</p>

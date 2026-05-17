@@ -6,8 +6,9 @@ import {
   Search, X, ExternalLink, ChevronDown, ChevronUp,
   BookOpen, Globe, Activity, AlertCircle, Stethoscope,
   FlaskConical, Users, FileText, MapPin, Dna, Play, Video,
-  Menu as MenuIcon, LayoutGrid
+  Menu as MenuIcon, LayoutGrid, Book
 } from "lucide-react";
+import { BookView } from "./components/BookView";
 
 import { cancersAC } from "./data/cancers-a-c";
 import { cancersDG } from "./data/cancers-d-g";
@@ -457,10 +458,11 @@ function CancerDetailPanel({ cancer, onClose }: { cancer: CancerEntry; onClose: 
 }
 
 // ── Main page ────────────────────────────────────────────────────────────────
-type MainTab = "cancers" | "resources" | "treatments" | "geography" | "support" | "trials" | "references" | "emergency" | "extended";
+type MainTab = "cancers" | "book" | "resources" | "treatments" | "geography" | "support" | "trials" | "references" | "emergency" | "extended";
 
 const TAB_META: Array<{ key: MainTab; label: string; icon: React.ReactNode }> = [
   { key: "cancers", label: "Cancer Types", icon: <BookOpen className="w-3.5 h-3.5" /> },
+  { key: "book", label: "The Book", icon: <Book className="w-3.5 h-3.5" /> },
   { key: "extended", label: "A–Z Extended", icon: <Dna className="w-3.5 h-3.5" /> },
   { key: "treatments", label: "Treatments", icon: <FlaskConical className="w-3.5 h-3.5" /> },
   { key: "geography", label: "Geography", icon: <MapPin className="w-3.5 h-3.5" /> },

@@ -45,10 +45,19 @@ export function Navbar() {
 
         {/* Right side — always shows Cancer Book chip, theme toggle, and hamburger */}
         <div className="flex items-center gap-2">
-          <span className="hidden sm:inline-flex items-center gap-1 px-2 py-1 rounded text-[10px] tracking-wide uppercase text-primary bg-primary/10 font-medium">
+          <button
+            onClick={() => {
+              window.location.hash = "book";
+              window.dispatchEvent(new CustomEvent("open-cancer-book"));
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            className="hidden sm:inline-flex items-center gap-1 px-2 py-1 rounded text-[10px] tracking-wide uppercase text-primary bg-primary/10 hover:bg-primary/20 font-medium transition-colors"
+            aria-label="Open Cancer Book"
+          >
             <BookOpen className="w-3 h-3" />
             Cancer Book
-          </span>
+          </button>
+
           <ThemeToggle />
           <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
             <SheetTrigger asChild>

@@ -1,12 +1,13 @@
 // Comprehensive long-form "Cancer Book" view — renders every CancerEntry as a chapter
 // with table of contents, in-page anchors and full clinical detail.
 
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import {
   Book, Search, X, ChevronRight, ExternalLink, FlaskConical, MapPin,
-  Activity, AlertCircle, Users, Stethoscope, Video as VideoIcon, Printer
+  Activity, AlertCircle, Users, Stethoscope, Video as VideoIcon, Printer, Download
 } from "lucide-react";
+
 import type { CancerEntry, CancerCategory } from "@/data/types";
 
 const CATEGORY_LABEL: Record<CancerCategory, string> = {
@@ -25,6 +26,33 @@ interface BookViewProps {
 
 export function BookView({ cancers }: BookViewProps) {
   const [tocQuery, setTocQuery] = useState("");
+  const [downloading, setDownloading] = useState(false);
+  const bookRef = useRef<HTMLDivElement>(null);
+
+  const handleDownloadPdf = async () => {
+    if (!bookRef.current) return;
+    setDownloading(true);
+    try {
+      const mod = await import("html2pdf.js");
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const html2pdf = (mod as any).default ?? (mod as any);
+      const opts = {
+        margin: [10, 10, 10, 10],
+        filename: `cancer-knowledge-book-${new Date().toISOString().slice(0, 10)}.pdf`,
+        image: { type: "jpeg", quality: 0.92 },
+        html2canvas: { scale: 2, useCORS: true, backgroundColor: "#ffffff" },
+        jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+        pagebreak: { mode: ["css", "legacy"] },
+      };
+      await html2pdf().set(opts).from(bookRef.current).save();
+    } finally {
+      setDownloading(false);
+    }
+  };
+
+
+
+
 
   // Group by first letter for TOC
   const grouped = useMemo(() => {
@@ -81,13 +109,24 @@ export function BookView({ cancers }: BookViewProps) {
         <p className="text-[10px] text-muted-foreground font-mono mb-3">
           {visible.length} of {cancers.length} chapters
         </p>
-        <button
-          onClick={() => window.print()}
-          className="w-full inline-flex items-center justify-center gap-1.5 px-2 py-1.5 mb-4 text-[11px] font-medium rounded-sm border border-border text-muted-foreground hover:text-foreground hover:border-primary/50 transition-colors"
-        >
-          <Printer className="w-3 h-3" />
-          Print / Save as PDF
-        </button>
+        <div className="space-y-1.5 mb-4">
+          <button
+            onClick={handleDownloadPdf}
+            disabled={downloading}
+            className="w-full inline-flex items-center justify-center gap-1.5 px-2 py-1.5 text-[11px] font-medium rounded-sm border border-primary/40 text-primary bg-primary/5 hover:bg-primary/10 transition-colors disabled:opacity-60 disabled:cursor-wait"
+          >
+            <Download className="w-3 h-3" />
+            {downloading ? "Generating PDF…" : "Download PDF"}
+          </button>
+          <button
+            onClick={() => window.print()}
+            className="w-full inline-flex items-center justify-center gap-1.5 px-2 py-1.5 text-[11px] font-medium rounded-sm border border-border text-muted-foreground hover:text-foreground hover:border-primary/50 transition-colors"
+          >
+            <Printer className="w-3 h-3" />
+            Print
+          </button>
+        </div>
+
         <nav className="space-y-3">
           {grouped.map(([letter, entries]) => {
             const filtered = entries.filter((e) => visibleIds.has(e.id));
@@ -116,7 +155,7 @@ export function BookView({ cancers }: BookViewProps) {
       </aside>
 
       {/* ── Chapters ── */}
-      <main className="space-y-12 print:space-y-6">
+      <main ref={bookRef} className="space-y-12 print:space-y-6">
         <div className="border-b border-border pb-6">
           <h1 className="font-serif text-3xl text-foreground mb-2">
             The Cancer Knowledge Book

@@ -1,12 +1,13 @@
 // Comprehensive long-form "Cancer Book" view — renders every CancerEntry as a chapter
 // with table of contents, in-page anchors and full clinical detail.
 
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import {
   Book, Search, X, ChevronRight, ExternalLink, FlaskConical, MapPin,
-  Activity, AlertCircle, Users, Stethoscope, Video as VideoIcon, Printer
+  Activity, AlertCircle, Users, Stethoscope, Video as VideoIcon, Printer, Download
 } from "lucide-react";
+
 import type { CancerEntry, CancerCategory } from "@/data/types";
 
 const CATEGORY_LABEL: Record<CancerCategory, string> = {

@@ -26,6 +26,31 @@ interface BookViewProps {
 
 export function BookView({ cancers }: BookViewProps) {
   const [tocQuery, setTocQuery] = useState("");
+  const [downloading, setDownloading] = useState(false);
+  const bookRef = useRef<HTMLDivElement>(null);
+
+  const handleDownloadPdf = async () => {
+    if (!bookRef.current) return;
+    setDownloading(true);
+    try {
+      const html2pdf = (await import("html2pdf.js")).default;
+      await html2pdf()
+        .set({
+          margin: [10, 10, 10, 10],
+          filename: `cancer-knowledge-book-${new Date().toISOString().slice(0, 10)}.pdf`,
+          image: { type: "jpeg", quality: 0.92 },
+          html2canvas: { scale: 2, useCORS: true, backgroundColor: "#ffffff" },
+          jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+          pagebreak: { mode: ["css", "legacy"] },
+        })
+        .from(bookRef.current)
+        .save();
+    } finally {
+      setDownloading(false);
+    }
+  };
+
+
 
   // Group by first letter for TOC
   const grouped = useMemo(() => {

@@ -331,9 +331,6 @@ export const videoEnrichment: Record<string, VideoResource[]> = {
   "Merkel-cell-carcinoma": [
     { title: "Merkel Cell Carcinoma — Rare Aggressive Skin Cancer", youtubeId: "PqQ3nT8L2Wk", channel: "Skin Cancer Foundation", durationMins: 7 },
   ],
-  "Nasopharyngeal-carcinoma": [
-    { title: "Nasopharyngeal Carcinoma — EBV-Related Cancer", youtubeId: "n2tQ7g3VxLk", channel: "Osmosis", durationMins: 8 },
-  ],
   "Thyroid-papillary": [
     { title: "Papillary Thyroid Cancer — Most Common Thyroid Cancer", youtubeId: "rA8dCMvL7Wk", channel: "American Thyroid Association", durationMins: 7 },
   ],

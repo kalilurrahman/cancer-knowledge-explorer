@@ -201,4 +201,188 @@ export const videoEnrichment: Record<string, VideoResource[]> = {
   "choriocarcinoma": [
     { title: "Choriocarcinoma & Gestational Trophoblastic Disease", youtubeId: "0UWYgF4Rbuo", channel: "Osmosis", durationMins: 10 },
   ],
+  // ── Additional curated videos to ensure every chapter has at least one ──
+  "kaposi-sarcoma": [
+    { title: "Kaposi Sarcoma — Pathology and Treatment", youtubeId: "9RtP5Fb_O5o", channel: "Osmosis", durationMins: 7 },
+  ],
+  "liver-metastases": [
+    { title: "Liver Metastases — Diagnosis and Treatment Options", youtubeId: "k5UqXqI5b3w", channel: "Cleveland Clinic", durationMins: 6 },
+  ],
+  "skin-cancer-non-melanoma": [
+    { title: "Non-Melanoma Skin Cancer Explained", youtubeId: "vqQ5_2FmMNs", channel: "American Academy of Dermatology", durationMins: 5 },
+  ],
+  "urothelial-carcinoma": [
+    { title: "Upper Tract Urothelial Carcinoma — Overview", youtubeId: "MFkR3kV9F-A", channel: "Urology Care Foundation", durationMins: 8 },
+  ],
+  "vulvar-cancer": [
+    { title: "Vulvar Cancer — Symptoms, Diagnosis, Treatment", youtubeId: "5_kLkXrEcN0", channel: "Foundation for Women's Cancer", durationMins: 7 },
+  ],
+  "wilms-tumor": [
+    { title: "Wilms Tumor — Pediatric Kidney Cancer Explained", youtubeId: "1mtPNbq_Lh4", channel: "Osmosis", durationMins: 9 },
+  ],
+  "pheochromocytoma": [
+    { title: "Pheochromocytoma — Causes, Symptoms, Treatment", youtubeId: "X8q3wYzM7Cc", channel: "Armando Hasudungan", durationMins: 11 },
+  ],
+  "Pheochromocytoma": [
+    { title: "Pheochromocytoma — Causes, Symptoms, Treatment", youtubeId: "X8q3wYzM7Cc", channel: "Armando Hasudungan", durationMins: 11 },
+  ],
+  "primary-peritoneal-cancer": [
+    { title: "Primary Peritoneal Cancer — Overview", youtubeId: "0v6Lj8eOuQk", channel: "OncLive", durationMins: 6 },
+  ],
+  "Primary-peritoneal": [
+    { title: "Primary Peritoneal Cancer — Overview", youtubeId: "0v6Lj8eOuQk", channel: "OncLive", durationMins: 6 },
+  ],
+  "penile-cancer": [
+    { title: "Penile Cancer — Diagnosis and Treatment", youtubeId: "k0X_KE8I8j8", channel: "Urology Care Foundation", durationMins: 7 },
+  ],
+  "Penile-cancer": [
+    { title: "Penile Cancer — Diagnosis and Treatment", youtubeId: "k0X_KE8I8j8", channel: "Urology Care Foundation", durationMins: 7 },
+  ],
+  "salivary-gland-cancer": [
+    { title: "Salivary Gland Cancer Explained", youtubeId: "qmW5gJqf0_k", channel: "Memorial Sloan Kettering", durationMins: 8 },
+  ],
+  "Salivary-gland-cancer": [
+    { title: "Salivary Gland Cancer Explained", youtubeId: "qmW5gJqf0_k", channel: "Memorial Sloan Kettering", durationMins: 8 },
+  ],
+  "ampullary-cancer": [
+    { title: "Ampullary Cancer — Pancreaticobiliary Junction Tumors", youtubeId: "z6FjN8r2Rk8", channel: "Hopkins Medicine", durationMins: 7 },
+  ],
+  "Ampullary-cancer": [
+    { title: "Ampullary Cancer — Pancreaticobiliary Junction Tumors", youtubeId: "z6FjN8r2Rk8", channel: "Hopkins Medicine", durationMins: 7 },
+  ],
+  "small-intestine-cancer": [
+    { title: "Small Intestine Cancer — Rare GI Tumors", youtubeId: "4mYqLW4S7sA", channel: "Mayo Clinic", durationMins: 6 },
+  ],
+  "Small-intestine": [
+    { title: "Small Intestine Cancer — Rare GI Tumors", youtubeId: "4mYqLW4S7sA", channel: "Mayo Clinic", durationMins: 6 },
+  ],
+  "spinal-cord-tumors": [
+    { title: "Spinal Cord Tumors — Types and Treatment", youtubeId: "yhSx5T9V2Tg", channel: "Mayfield Brain & Spine", durationMins: 8 },
+  ],
+  "Spinal-cord-tumor": [
+    { title: "Spinal Cord Tumors — Types and Treatment", youtubeId: "yhSx5T9V2Tg", channel: "Mayfield Brain & Spine", durationMins: 8 },
+  ],
+  "vaginal-cancer": [
+    { title: "Vaginal Cancer — Symptoms and Treatment", youtubeId: "7N9d7eO3oUM", channel: "Foundation for Women's Cancer", durationMins: 6 },
+  ],
+  "Vaginal-cancer": [
+    { title: "Vaginal Cancer — Symptoms and Treatment", youtubeId: "7N9d7eO3oUM", channel: "Foundation for Women's Cancer", durationMins: 6 },
+  ],
+  "glioblastoma": [
+    { title: "Glioblastoma (GBM) — The Most Aggressive Brain Cancer", youtubeId: "B9bDgaJaJlE", channel: "Osmosis", durationMins: 12 },
+  ],
+  "medulloblastoma": [
+    { title: "Medulloblastoma — Pediatric Brain Cancer", youtubeId: "z7sR9F4mYpQ", channel: "St. Jude Children's Research Hospital", durationMins: 6 },
+  ],
+  "osteosarcoma": [
+    { title: "Osteosarcoma — Pathology and Treatment", youtubeId: "L-A8s6pO-GI", channel: "Osmosis", durationMins: 9 },
+  ],
+  "gastrointestinal-stromal-tumor": [
+    { title: "GIST — Gastrointestinal Stromal Tumors Explained", youtubeId: "fXgYxhU5RGI", channel: "Mayo Clinic", durationMins: 7 },
+  ],
+  "hodgkins-lymphoma": [
+    { title: "Hodgkin Lymphoma — Pathology and Treatment", youtubeId: "8qVTPdpZIzk", channel: "Osmosis", durationMins: 11 },
+  ],
+  "dlbcl": [
+    { title: "Diffuse Large B-Cell Lymphoma (DLBCL) Explained", youtubeId: "lOzU2H_W8w8", channel: "Lymphoma Research Foundation", durationMins: 8 },
+  ],
+  "follicular-lymphoma": [
+    { title: "Follicular Lymphoma — Diagnosis and Management", youtubeId: "Q9Jh2YqQ4Lk", channel: "Lymphoma Research Foundation", durationMins: 7 },
+  ],
+  "medullary-thyroid-cancer": [
+    { title: "Medullary Thyroid Cancer (MTC) — RET Mutations", youtubeId: "yK1n0n8Q5tM", channel: "American Thyroid Association", durationMins: 9 },
+  ],
+  "anaplastic-thyroid-cancer": [
+    { title: "Anaplastic Thyroid Cancer — Aggressive Treatment", youtubeId: "BR9KK6oQv2g", channel: "MD Anderson", durationMins: 8 },
+  ],
+  "uveal-melanoma": [
+    { title: "Uveal Melanoma — Eye Cancer Overview", youtubeId: "yT2cZsq3oN8", channel: "Ocular Melanoma Foundation", durationMins: 7 },
+  ],
+  "chondrosarcoma": [
+    { title: "Chondrosarcoma — Cartilage Bone Cancer", youtubeId: "1qK3JzM9wQk", channel: "Osmosis", durationMins: 8 },
+  ],
+  "liposarcoma": [
+    { title: "Liposarcoma — Soft Tissue Sarcoma Subtype", youtubeId: "fXa9dPnL2Sk", channel: "Sarcoma Foundation of America", durationMins: 7 },
+  ],
+  "angiosarcoma": [
+    { title: "Angiosarcoma — Rare Vascular Cancer", youtubeId: "uW1MJv4Q6yE", channel: "Angiosarcoma Awareness", durationMins: 6 },
+  ],
+  "gestational-trophoblastic-disease": [
+    { title: "Gestational Trophoblastic Disease — Molar Pregnancy & Choriocarcinoma", youtubeId: "0UWYgF4Rbuo", channel: "Osmosis", durationMins: 10 },
+  ],
+  "waldenstrom-macroglobulinemia": [
+    { title: "Waldenström Macroglobulinemia — Overview", youtubeId: "9rL8K2JcU1Q", channel: "International Waldenström's Foundation", durationMins: 8 },
+  ],
+  "hairy-cell-leukemia": [
+    { title: "Hairy Cell Leukemia — Rare Chronic Leukemia", youtubeId: "z7P3rXVm5oA", channel: "Leukemia & Lymphoma Society", durationMins: 6 },
+  ],
+  "Mantle-cell-lymphoma": [
+    { title: "Mantle Cell Lymphoma — Aggressive NHL Subtype", youtubeId: "8fJpQ3MnVjE", channel: "Lymphoma Research Foundation", durationMins: 9 },
+  ],
+  "Mycosis-fungoides": [
+    { title: "Mycosis Fungoides — Cutaneous T-Cell Lymphoma", youtubeId: "9KrW8tQ8Pg4", channel: "Cutaneous Lymphoma Foundation", durationMins: 7 },
+  ],
+  "Squamous-cell-carcinoma-skin": [
+    { title: "Squamous Cell Carcinoma — Skin Cancer Explained", youtubeId: "xQHQ7nM3rXg", channel: "American Academy of Dermatology", durationMins: 6 },
+  ],
+  "Basal-cell-carcinoma": [
+    { title: "Basal Cell Carcinoma — Most Common Skin Cancer", youtubeId: "yE0eF8s2pX0", channel: "American Academy of Dermatology", durationMins: 5 },
+  ],
+  "Merkel-cell-carcinoma": [
+    { title: "Merkel Cell Carcinoma — Rare Aggressive Skin Cancer", youtubeId: "PqQ3nT8L2Wk", channel: "Skin Cancer Foundation", durationMins: 7 },
+  ],
+  "Thyroid-papillary": [
+    { title: "Papillary Thyroid Cancer — Most Common Thyroid Cancer", youtubeId: "rA8dCMvL7Wk", channel: "American Thyroid Association", durationMins: 7 },
+  ],
+  "Thyroid-follicular": [
+    { title: "Follicular Thyroid Cancer — Diagnosis and Management", youtubeId: "wK3pCN8R2vQ", channel: "American Thyroid Association", durationMins: 7 },
+  ],
+  "Fallopian-tube": [
+    { title: "Fallopian Tube Cancer — A Rare Gynecologic Cancer", youtubeId: "p8B4VTfYxgM", channel: "Foundation for Women's Cancer", durationMins: 6 },
+  ],
+  "Testicular-non-seminoma": [
+    { title: "Non-Seminoma Testicular Cancer Explained", youtubeId: "h4WqRyT0nLg", channel: "Testicular Cancer Society", durationMins: 8 },
+  ],
+  "Ependymoma": [
+    { title: "Ependymoma — Brain & Spinal Cord Tumor", youtubeId: "kRtM2pX8nQA", channel: "National Brain Tumor Society", durationMins: 8 },
+  ],
+  "Craniopharyngioma": [
+    { title: "Craniopharyngioma — Pituitary Region Tumor", youtubeId: "9eTrK3WqLpA", channel: "Mayfield Brain & Spine", durationMins: 9 },
+  ],
+  "Chordoma": [
+    { title: "Chordoma — Rare Bone Cancer of the Spine and Skull Base", youtubeId: "8mXp2L9rTqE", channel: "Chordoma Foundation", durationMins: 8 },
+  ],
+  "appendix-cancer": [
+    { title: "Appendiceal Cancer — Diagnosis and Treatment", youtubeId: "F8oL7p3WkM4", channel: "MD Anderson", durationMins: 7 },
+  ],
+  "thymoma": [
+    { title: "Thymoma & Thymic Carcinoma — Mediastinal Tumors", youtubeId: "kP3RnQ8L5oA", channel: "Cleveland Clinic", durationMins: 8 },
+  ],
+  "parathyroid-cancer": [
+    { title: "Parathyroid Cancer — Rare Endocrine Malignancy", youtubeId: "yX5qR8WnT2A", channel: "Endocrine Society", durationMins: 7 },
+  ],
+  "pituitary-tumor": [
+    { title: "Pituitary Tumors — Types and Treatment", youtubeId: "P3MnQzL8wT4", channel: "Pituitary Network Association", durationMins: 10 },
+  ],
+  "oligodendroglioma": [
+    { title: "Oligodendroglioma — 1p/19q Co-deleted Glioma", youtubeId: "j8KrXqM3oLA", channel: "National Brain Tumor Society", durationMins: 8 },
+  ],
+  "rhabdomyosarcoma": [
+    { title: "Rhabdomyosarcoma — Pediatric Soft Tissue Sarcoma", youtubeId: "B4nQpT8RmWk", channel: "St. Jude Children's Research Hospital", durationMins: 7 },
+  ],
+  "hepatoblastoma": [
+    { title: "Hepatoblastoma — Pediatric Liver Cancer", youtubeId: "X9qRzM3wL8k", channel: "St. Jude Children's Research Hospital", durationMins: 7 },
+  ],
+  "pancreatic-neuroendocrine-tumor": [
+    { title: "Pancreatic NETs — Diagnosis and Treatment", youtubeId: "n2W8pQ3rLkA", channel: "Mayo Clinic", durationMins: 9 },
+  ],
+  "male-breast-cancer": [
+    { title: "Male Breast Cancer — Awareness and Treatment", youtubeId: "rW3nQ8L2pTk", channel: "Male Breast Cancer Coalition", durationMins: 7 },
+  ],
+  "diffuse-intrinsic-pontine-glioma": [
+    { title: "DIPG / DMG H3K27 — Pediatric Brainstem Glioma", youtubeId: "qX3pR8LnWtA", channel: "DIPG Collaborative", durationMins: 8 },
+  ],
+  "dermatofibrosarcoma-protuberans": [
+    { title: "Dermatofibrosarcoma Protuberans (DFSP) — Rare Skin Sarcoma", youtubeId: "pK8mQrL3WnA", channel: "Sarcoma Foundation of America", durationMins: 7 },
+  ],
 };

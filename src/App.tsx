@@ -493,6 +493,24 @@ export default function CancerBook() {
     return () => document.removeEventListener("mousedown", handleClick);
   }, [sectionMenuOpen]);
 
+  // Listen for navigation to the Cancer Book via hash or custom event
+  useEffect(() => {
+    const goToBook = () => {
+      if (window.location.hash === "#book" || window.location.hash.startsWith("#chapter-")) {
+        setActiveTab("book");
+      }
+    };
+    goToBook();
+    const handleOpen = () => setActiveTab("book");
+    window.addEventListener("hashchange", goToBook);
+    window.addEventListener("open-cancer-book", handleOpen as EventListener);
+    return () => {
+      window.removeEventListener("hashchange", goToBook);
+      window.removeEventListener("open-cancer-book", handleOpen as EventListener);
+    };
+  }, []);
+
+
   const categories: Array<CancerCategory | "all"> = [
     "all", "carcinoma", "leukemia", "lymphoma", "sarcoma", "melanoma", "cns", "other",
   ];

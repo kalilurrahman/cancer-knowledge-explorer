@@ -153,7 +153,7 @@ export function BookView({ cancers }: BookViewProps) {
       </aside>
 
       {/* ── Chapters ── */}
-      <main className="space-y-12 print:space-y-6">
+      <main ref={bookRef} className="space-y-12 print:space-y-6">
         <div className="border-b border-border pb-6">
           <h1 className="font-serif text-3xl text-foreground mb-2">
             The Cancer Knowledge Book

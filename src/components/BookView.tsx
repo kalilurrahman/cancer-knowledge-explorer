@@ -33,7 +33,9 @@ export function BookView({ cancers }: BookViewProps) {
     if (!bookRef.current) return;
     setDownloading(true);
     try {
-      const html2pdf = (await import("html2pdf.js")).default;
+      const mod = await import("html2pdf.js");
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const html2pdf = (mod as any).default ?? (mod as any);
       const opts = {
         margin: [10, 10, 10, 10],
         filename: `cancer-knowledge-book-${new Date().toISOString().slice(0, 10)}.pdf`,
@@ -41,12 +43,13 @@ export function BookView({ cancers }: BookViewProps) {
         html2canvas: { scale: 2, useCORS: true, backgroundColor: "#ffffff" },
         jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
         pagebreak: { mode: ["css", "legacy"] },
-      } as unknown as Parameters<ReturnType<typeof html2pdf>["set"]>[0];
+      };
       await html2pdf().set(opts).from(bookRef.current).save();
     } finally {
       setDownloading(false);
     }
   };
+
 
 
 

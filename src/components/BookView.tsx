@@ -107,13 +107,24 @@ export function BookView({ cancers }: BookViewProps) {
         <p className="text-[10px] text-muted-foreground font-mono mb-3">
           {visible.length} of {cancers.length} chapters
         </p>
-        <button
-          onClick={() => window.print()}
-          className="w-full inline-flex items-center justify-center gap-1.5 px-2 py-1.5 mb-4 text-[11px] font-medium rounded-sm border border-border text-muted-foreground hover:text-foreground hover:border-primary/50 transition-colors"
-        >
-          <Printer className="w-3 h-3" />
-          Print / Save as PDF
-        </button>
+        <div className="space-y-1.5 mb-4">
+          <button
+            onClick={handleDownloadPdf}
+            disabled={downloading}
+            className="w-full inline-flex items-center justify-center gap-1.5 px-2 py-1.5 text-[11px] font-medium rounded-sm border border-primary/40 text-primary bg-primary/5 hover:bg-primary/10 transition-colors disabled:opacity-60 disabled:cursor-wait"
+          >
+            <Download className="w-3 h-3" />
+            {downloading ? "Generating PDF…" : "Download PDF"}
+          </button>
+          <button
+            onClick={() => window.print()}
+            className="w-full inline-flex items-center justify-center gap-1.5 px-2 py-1.5 text-[11px] font-medium rounded-sm border border-border text-muted-foreground hover:text-foreground hover:border-primary/50 transition-colors"
+          >
+            <Printer className="w-3 h-3" />
+            Print
+          </button>
+        </div>
+
         <nav className="space-y-3">
           {grouped.map(([letter, entries]) => {
             const filtered = entries.filter((e) => visibleIds.has(e.id));
